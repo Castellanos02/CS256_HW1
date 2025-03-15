@@ -15,4 +15,11 @@
         <a href="{{ url_for('bot') }}">Chatbot</a>
         <a href="{{ url_for('contribute') }}">Submit Paper</a>
         <a href="{{ url_for('learning') }}">AI Learning Materials</a>
+        
+        {% if is_admin == 1 %}
+            <a href="{{ url_for('approve') }}">Admin Panel</a>
+        {% endif %}
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+
     </div>
