@@ -1,0 +1,147 @@
+index,pid,url,name,author,description
+0,1,http://arxiv.org/abs/1802.10546v2,Computational Theories of Curiosity-Driven Learning,Pierre-Yves Oudeyer,"What are the functions of curiosity? What are the mechanisms of
+curiosity-driven learning? We approach these questions about the living using
+concepts and tools from machine learning and developme..."
+1,2,http://arxiv.org/abs/1806.06301v1,"Biased Embeddings from Wild Data: Measuring, Understanding and Removing","Thomas Lansdall-Welfare, Nello Cristianini, Adam Sutton","Many modern Artificial Intelligence (AI) systems make use of data embeddings,
+particularly in the domain of Natural Language Processing (NLP). These
+embeddings are learnt from data that has been g..."
+2,3,http://arxiv.org/abs/1805.00107v2,MV-YOLO: Motion Vector-aided Tracking by Semantic Object Detection,"Ivan V. Bajić, Saeed Ranjbar Alvar","Object tracking is the cornerstone of many visual analytics systems. While
+considerable progress has been made in this area in recent years, robust,
+efficient, and accurate tracking in real-world ..."
+3,4,http://arxiv.org/abs/1806.06029v2,One-Shot Unsupervised Cross Domain Translation,"Sagie Benaim, Lior Wolf","Given a single image x from domain A and a set of images from domain B, our
+task is to generate the analogous of x in B. We argue that this task could be a
+key AI capability that underlines the ab..."
+4,5,http://arxiv.org/abs/1806.05740v2,Using Search Queries to Understand Health Information Needs in Africa,"H. Andrew Schwartz, Jennifer Wortman Vaughan, Rediet Abebe, Shawndra Hill, Peter M. Small","The lack of comprehensive, high-quality health data in developing nations
+creates a roadblock for combating the impacts of disease. One key challenge is
+understanding the health information needs ..."
+5,6,http://arxiv.org/abs/1806.05219v2,Bringing replication and reproduction together with generalisability in NLP: Three reproduction studies for Target Dependent Sentiment Analysis,"Andrew Moore, Paul Rayson","Lack of repeatability and generalisability are two significant threats to
+continuing scientific development in Natural Language Processing. Language
+models and learning methods are so complex that..."
+6,7,http://arxiv.org/abs/1806.04915v1,The IQ of Artificial Intelligence,Dimiter Dobrev,"All it takes to identify the computer programs which are Artificial
+Intelligence is to give them a test and award AI to those that pass the test.
+Let us say that the scores they earn at the test w..."
+7,8,http://arxiv.org/abs/1806.04497v1,"A Virtual Environment with Multi-Robot Navigation, Analytics, and Decision Support for Critical Incident Investigation","Sai Abinesh, Frank G. Glavin, David L. Smyth, Brett Drury, Michael G. Madden, James Fennell, Ihsan Ullah, Nazli B. Karimi","Accidents and attacks that involve chemical, biological, radiological/nuclear
+or explosive (CBRNE) substances are rare, but can be of high consequence. Since
+the investigation of such events is no..."
+8,9,http://arxiv.org/abs/1806.04471v1,Colwell's Castle Defence: A Custom Game Using Dynamic Difficulty Adjustment to Increase Player Enjoyment,"Frank G. Glavin, Anthony M. Colwell","Dynamic Difficulty Adjustment (DDA) is a mechanism used in video games that
+automatically tailors the individual gaming experience to match an appropriate
+difficulty setting. This is generally ach..."
+9,10,http://arxiv.org/abs/1805.12234v3,Collaborative Human-AI (CHAI): Evidence-Based Interpretable Melanoma Classification in Dermoscopic Images,"John R. Smith, Chung-Ching Lin, Allan Halpern, Rogerio Feris, Noel C. F. Codella, Michael Hind","Automated dermoscopic image analysis has witnessed rapid growth in diagnostic
+performance. Yet adoption faces resistance, in part, because no evidence is
+provided to support decisions. In this wor..."
+10,11,http://arxiv.org/abs/1806.02877v2,In Ictu Oculi: Exposing AI Generated Fake Face Videos by Detecting Eye Blinking,"Ming-Ching Chang, Siwei Lyu, Yuezun Li","The new developments in deep generative networks have significantly improve
+the quality and efficiency in generating realistically-looking fake face
+videos. In this work, we describe a new method ..."
+11,12,http://arxiv.org/abs/1806.01261v3,"Relational inductive biases, deep learning, and graph networks","Chris Dyer, Victoria Langston, Charles Nash, Ryan Faulkner, Alvaro Sanchez-Gonzalez, Victor Bapst, Peter W. Battaglia, Adam Santoro, Yujia Li, Nicolas Heess, Francis Song, David Raposo, Ashish Vaswani, Andrew Ballard, Mateusz Malinowski, Kelsey Allen, Justin Gilmer, Jessica B. Hamrick, George Dahl, Daan Wierstra, Vinicius Zambaldi, Razvan Pascanu, Pushmeet Kohli, Oriol Vinyals, Matt Botvinick, Caglar Gulcehre, Andrea Tacchetti","Artificial intelligence (AI) has undergone a renaissance recently, making
+major progress in key domains such as vision, language, control, and
+decision-making. This has been due, in part, to cheap..."
+12,13,http://arxiv.org/abs/1806.03820v1,"An Efficient, Generalized Bellman Update For Cooperative Inverse Reinforcement Learning","Dylan Hadfield-Menell, Malayandi Palaniappan, Jaime F. Fisac, Dhruv Malik, Anca D. Dragan, Stuart Russell","Our goal is for AI systems to correctly identify and act according to their
+human user's objectives. Cooperative Inverse Reinforcement Learning (CIRL)
+formalizes this value alignment problem as a ..."
+13,14,http://arxiv.org/abs/1803.01967v2,Learning Scene Gist with Convolutional Neural Networks to Improve Object Recognition,"Kevin Wu, Eric Wu, Gabriel Kreiman","Advancements in convolutional neural networks (CNNs) have made significant
+strides toward achieving high performance levels on multiple object recognition
+tasks. While some approaches utilize info..."
+14,15,http://arxiv.org/abs/1506.05855v5,Information-based inference for singular models and finite sample sizes: A frequentist information criterion,"Paul A. Wiggins, Colin H. LaMont","In the information-based paradigm of inference, model selection is performed
+by selecting the candidate model with the best estimated predictive
+performance. The success of this approach depends o..."
+15,16,http://arxiv.org/abs/1806.04037v1,Neonatal EEG Interpretation and Decision Support Framework for Mobile Platforms,"Geraldine Boylan, Alison O'Shea, Mark O'Sullivan, Sean Mathieson, Sergi Gomez, Andriy Temko, Kevin Huillca, Emanuel Popovici, Eduard Salgado","This paper proposes and implements an intuitive and pervasive solution for
+neonatal EEG monitoring assisted by sonification and deep learning AI that
+provides information about neonatal brain heal..."
+16,17,http://arxiv.org/abs/1806.03002v1,Domain Adaptive Generation of Aircraft on Satellite Imagery via Simulated and Unsupervised Learning,"Seunghyun Jeon, Junghoon Seo, Taegyun Jeon","Object detection and classification for aircraft are the most important tasks
+in the satellite image analysis. The success of modern detection and
+classification methods has been based on machine ..."
+17,18,http://arxiv.org/abs/1806.02027v3,Discrete-Continuous Mixtures in Probabilistic Programming: Generalized Semantics and Inference Algorithms,"Yi Wu, Simon Du, Stuart Russell, Siddharth Srivastava, Nicholas Hay","Despite the recent successes of probabilistic programming languages (PPLs) in
+AI applications, PPLs offer only limited support for random variables whose
+distributions combine discrete and continu..."
+18,19,http://arxiv.org/abs/1806.01023v3,Differential Diagnosis for Pancreatic Cysts in CT Scans Using Densely-Connected Convolutional Networks,"Kanru Lin, Rickmer Braren, Bjoern Menze, Kuangyu Shi, Ji Li, Deliang Fu, Roland Schmid, Maximilian Reichert, Lina Xu, Hongwei Li","The lethal nature of pancreatic ductal adenocarcinoma (PDAC) calls for early
+differential diagnosis of pancreatic cysts, which are identified in up to 16%
+of normal subjects, and some of which may..."
+19,20,http://arxiv.org/abs/1806.02566v1,AI-based Two-Stage Intrusion Detection for Software Defined IoT Networks,"Honggang Zhang, Zhifeng Zhao, Jiaqi Li, Rongpeng Li","Software Defined Internet of Things (SD-IoT) Networks profits from
+centralized management and interactive resource sharing which enhances the
+efficiency and scalability of IoT applications. But wi..."
+20,21,http://arxiv.org/abs/1706.01580v2,Global-Local Airborne Mapping (GLAM): Reconstructing a City from Aerial Videos,"Matthew Antone, Hasnain Vohra, William Stephenson, Maxim Bazik, Joseph Mundy","Monocular visual SLAM has become an attractive practical approach for robot
+localization and 3D environment mapping, since cameras are small, lightweight,
+inexpensive, and produce high-rate, high-..."
+21,22,http://arxiv.org/abs/1806.03982v2,Quantitative Phase Imaging and Artificial Intelligence: A Review,"YongKeun Park, Hyun-seok Min, Hyungjoo Cho, Sang Yun Lee, Gunho Choi, YoungJu Jo, Geon Kim","Recent advances in quantitative phase imaging (QPI) and artificial
+intelligence (AI) have opened up the possibility of an exciting frontier. The
+fast and label-free nature of QPI enables the rapid..."
+22,23,http://arxiv.org/abs/1806.02448v1,Deep Reinforcement Learning for General Video Game AI,"Diego Perez-Liebana, Julian Togelius, Philip Bontrager, Jialin Liu, Ruben Rodriguez Torrado","The General Video Game AI (GVGAI) competition and its associated software
+framework provides a way of benchmarking AI algorithms on a large number of
+games written in a domain-specific description..."
+23,24,http://arxiv.org/abs/1806.02421v1,Human-aided Multi-Entity Bayesian Networks Learning from Relational Data,"Cheol Young Park, Kathryn Blackmond Laskey","An Artificial Intelligence (AI) system is an autonomous system which emulates
+human mental and physical activities such as Observe, Orient, Decide, and Act,
+called the OODA process. An AI system p..."
+24,25,http://arxiv.org/abs/1806.02308v1,"Model-free, Model-based, and General Intelligence",Hector Geffner,"During the 60s and 70s, AI researchers explored intuitions about intelligence
+by writing programs that displayed intelligent behavior. Many good ideas came
+out from this work but programs written ..."
+25,26,http://arxiv.org/abs/1806.02137v1,A New Framework for Machine Intelligence: Concepts and Prototype,Abel Torres Montoya,"Machine learning (ML) and artificial intelligence (AI) have become hot topics
+in many information processing areas, from chatbots to scientific data
+analysis. At the same time, there is uncertaint..."
+26,27,http://arxiv.org/abs/1806.02654v1,New Hybrid Neuro-Evolutionary Algorithms for Renewable Energy and Facilities Management Problems,L. Cornejo-Bueno,"This Ph.D. thesis deals with the optimization of several renewable energy
+resources development as well as the improvement of facilities management in
+oceanic engineering and airports, using compu..."
+27,28,http://arxiv.org/abs/1711.05541v5,Good and safe uses of AI Oracles,"Xavier O'Rorke, Stuart Armstrong","It is possible that powerful and potentially dangerous artificial
+intelligence (AI) might be developed in the future. An Oracle is a design which
+aims to restrain the impact of a potentially dange..."
+28,29,http://arxiv.org/abs/1806.01322v1,Past Visions of Artificial Futures: One Hundred and Fifty Years under the Spectre of Evolving Machines,"Tim Taylor, Alan Dorin","The influence of Artificial Intelligence (AI) and Artificial Life (ALife)
+technologies upon society, and their potential to fundamentally shape the
+future evolution of humankind, are topics very m..."
+29,30,http://arxiv.org/abs/1402.6208v2,The Anatomy of a Modular System for Media Content Analysis,"Thomas Lansdall-Welfare, Ilias Flaounas, Nello Cristianini, Panagiota Antonakaki","Intelligent systems for the annotation of media content are increasingly
+being used for the automation of parts of social science research. In this
+domain the problem of integrating various Artifi..."
+30,31,http://arxiv.org/abs/1806.01151v1,Shallow decision-making analysis in General Video Game Playing,"Diego Perez-Liebana, Simon Lucas, Jialin Liu, Ivan Bravi","The General Video Game AI competitions have been the testing ground for
+several techniques for game playing, such as evolutionary computation
+techniques, tree search algorithms, hyper heuristic ba..."
+31,32,http://arxiv.org/abs/1806.00839v1,Study and development of a Computer-Aided Diagnosis system for classification of chest x-ray images using convolutional neural networks pre-trained for ImageNet and data augmentation,Vinicius Pavanelli Vianna,"Convolutional neural networks (ConvNets) are the actual standard for image
+recognizement and classification. On the present work we develop a Computer
+Aided-Diagnosis (CAD) system using ConvNets t..."
+32,33,http://arxiv.org/abs/1806.00801v1,AID++: An Updated Version of AID on Scene Classification,"Gui-Song Xia, Qikai Lu, Pu Jin, Liangpei Zhang, Fan Hu","Aerial image scene classification is a fundamental problem for understanding
+high-resolution remote sensing images and has become an active research task in
+the field of remote sensing due to its ..."
+33,34,https://arxiv.org/abs/1806.00610v2,Between Progress and Potential Impact of AI: the Neglected Dimensions,"José Hernández-Orallo, Sean Ó hÉigeartaigh, Fernando Martínez-Plumed, Allan Dafoe, Miles Brundage, Shahar Avin","We reframe the analysis of progress in AI by incorporating into an overall framework both the task performance of a system, and the time and resource costs incurred in the development and deployme..."
+34,35,http://arxiv.org/abs/1806.00499v1,Backpropagation for Implicit Spectral Densities,"Yann Lecun, Aditya Ramesh","Most successful machine intelligence systems rely on gradient-based learning,
+which is made possible by backpropagation. Some systems are designed to aid us
+in interpreting data when explicit goal..."
+35,36,http://arxiv.org/abs/1806.00358v2,"A Systematic Classification of Knowledge, Reasoning, and Context within the ARC Dataset","Achille Fokoue-Nkoutche, Harshit Padigela, Pritish Yuvraj, Pavan Kapanipathi, Nicholas Mattei, Michael Witbrock, Andrew McCallum, Rajarshi Das, Michael Boratko, Maria Chang, Divyendra Mikkilineni, Ryan Musa, Kartik Talamadupula","The recent work of Clark et al. introduces the AI2 Reasoning Challenge (ARC)
+and the associated ARC dataset that partitions open domain, complex science
+questions into an Easy Set and a Challenge ..."
+36,37,http://arxiv.org/abs/1806.00206v1,Inference Aided Reinforcement Learning for Incentive Mechanism Design in Crowdsourcing,"Zehong Hu, Yitao Liang, Jie Zhang, Yang Liu","Incentive mechanisms for crowdsourcing are designed to incentivize
+financially self-interested workers to generate and report high-quality labels.
+Existing mechanisms are often developed as one-sh..."
+37,38,https://arxiv.org/abs/1806.00125v2,Accelerating Incremental Gradient Optimization with Curvature Information,"Hoi-To Wai, Cesar A. Uribe, Angelia Nedich, Wei Shi, Anna Scaglione",This paper studies an acceleration technique for incremental aggregated gradient ({\sf IAG}) method through the use of \emph{curvature} information for solving strongly convex finite sum optimizat...
+38,39,http://arxiv.org/abs/1805.12506v1,Robust Gyroscope-Aided Camera Self-Calibration,"Santiago Cortés Reina, Juho Kannala, Arno Solin","Camera calibration for estimating the intrinsic parameters and lens
+distortion is a prerequisite for various monocular vision applications
+including feature tracking and video stabilization. This ..."
+39,40,http://arxiv.org/abs/1805.12393v1,KG^2: Learning to Reason Science Exam Questions with Contextual Knowledge Graph Embeddings,"Hanjun Dai, Le Song, Kamil Toraman, Yuyu Zhang","The AI2 Reasoning Challenge (ARC), a new benchmark dataset for question
+answering (QA) has been recently released. ARC only contains natural science
+questions authored for human exams, which are h..."
+40,41,http://arxiv.org/abs/1805.08400v3,Deep Learning with Cinematic Rendering: Fine-Tuning Deep Neural Networks Using Photorealistic Medical Images,"Sandra Sudarsky, Faisal Mahmood, Nicholas J. Durr, Richard Chen, Daphne Yu","Deep learning has emerged as a powerful artificial intelligence tool to
+interpret medical images for a growing variety of applications. However, the
+paucity of medical imaging data with high-quali..."
+41,42,http://arxiv.org/abs/1806.00352v1,Too Fast Causal Inference under Causal Insufficiency,Mieczysław A. Kłopotek,"Causally insufficient structures (models with latent or hidden variables, or
+with confounding etc.) of joint probability distributions have been subject of
+intense study not only in statistics, bu..."
+42,43,http://arxiv.org/abs/1805.12090v2,Problem-Adapted Artificial Intelligence for Online Network Optimization,"Thrasyvoulos Spyropoulos, Georgios S. Paschos, Spyridon Vassilaras, Nikolaos Liakopoulos, Merouane Debbah, Luigi Vigneri, Apostolos Destounis","Future 5G wireless networks will rely on agile and automated network
+management, where the usage of diverse resources must be jointly optimized with
+surgical accuracy. A number of key wireless net..."
+43,44,http://arxiv.org/abs/1805.12085v1,MPDCompress - Matrix Permutation Decomposition Algorithm for Deep Neural Network Compression,"Rawan Naous, Lazar Supic, Aleksandra Faust, Vladimir Stojanovic, Ranko Sredojevic","Deep neural networks (DNNs) have become the state-of-the-art technique for
+machine learning tasks in various applications. However, due to their size and
+the computational complexity, large DNNs a..."
+44,45,http://arxiv.org/abs/1805.11984v2,Automatic generation of object shapes with desired functionalities,"José Santos-Victor, Mihai Andries, Atabak Dehban","3D objects (artefacts) are made to fulfill functions. Designing an object
+often starts with defining a list of functionalities that it should provide,
+also known as functional requirements. Today,..."
+45,46,http://arxiv.org/abs/1805.11856v1,RUN:Residual U-Net for Computer-Aided Detection of Pulmonary Nodules without Candidate Selection,"Tian Lan, Zhiguang Qin, Yuanyuan Li, Jonah Kimani Murugi, Yi Ding","The early detection and early diagnosis of lung cancer are crucial to improve
+the survival rate of lung cancer patients. Pulmonary nodules detection results
+have a significant impact on the later ..."
+46,47,http://arxiv.org/abs/1805.11783v2,To Trust Or Not To Trust A Classifier,"Melody Y. Guan, Been Kim, Maya Gupta, Heinrich Jiang","Knowing when a classifier's prediction can be trusted is useful in many
+applications and critical for safely using AI. While the bulk of the effort in
+machine learning research has been towards im..."
+47,48,http://arxiv.org/abs/1805.11768v1,"""Press Space to Fire"": Automatic Video Game Tutorial Generation","Gabriella A. B. Barros, Michael Cerny Green, Julian Togelius, Ahmed Khalifa","We propose the problem of tutorial generation for games, i.e. to generate
+tutorials which can teach players to play games, as an AI problem. This problem
+can be approached in several ways, includi..."
+48,49,http://arxiv.org/abs/1710.00880v3,Distributional Inclusion Vector Embedding for Unsupervised Hypernymy Detection,"Haw-Shiuan Chang, Andrew McCallum, ZiYun Wang, Luke Vilnis","Modeling hypernymy, such as poodle is-a dog, is an important generalization
+aid to many NLP tasks, such as entailment, coreference, relation extraction,
+and question answering. Supervised learning..."
+49,50,http://arxiv.org/abs/1805.11534v2,airpred: A Flexible R Package Implementing Methods for Predicting Air Pollution,"Christine Choirat, M. Benjamin Sabath, Francesca Dominici, Danielle Braun, Joel Schwarz, Qian Di","Fine particulate matter (PM$_{2.5}$) is one of the criteria air pollutants
+regulated by the Environmental Protection Agency in the United States. There is
+strong evidence that ambient exposure to ..."

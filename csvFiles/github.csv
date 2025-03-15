@@ -1,0 +1,31 @@
+index,gid,url,name,description,stars
+0,1,https://github.com/Significant-Gravitas/AutoGPT,AutoGPT,"AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",173425
+1,2,https://github.com/AUTOMATIC1111/stable-diffusion-webui,stable-diffusion-webui,Stable Diffusion web UI,149444
+2,3,https://github.com/open-webui/open-webui,open-webui,"User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",83572
+3,4,https://github.com/langgenius/dify,dify,"Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting y...",82357
+4,5,https://github.com/ChatGPTNextWeb/NextChat,NextChat,✨ Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android |  Linux | Windows,81958
+5,6,https://github.com/supabase/supabase,supabase,"The open source Firebase alternative. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",79244
+6,7,https://github.com/microsoft/generative-ai-for-beginners,generative-ai-for-beginners,"21 Lessons, Get Started Building with Generative AI  🔗 https://microsoft.github.io/generative-ai-for-beginners/",75145
+7,8,https://github.com/fighting41love/funNLP,funNLP,中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、连续英文切割、各种中文词向量、公司名字大全、古诗词库、IT词库、财经词库、成语词库、地名词库...,71671
+8,9,https://github.com/n8n-io/n8n,n8n,"Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",67562
+9,10,https://github.com/AppFlowy-IO/AppFlowy,AppFlowy,"Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",61366
+10,11,https://github.com/lobehub/lobe-chat,lobe-chat,"🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / DeepSeek / Qwen), Knowledge Base (file upload / knowledge manageme...",57700
+11,12,https://github.com/lencx/ChatGPT,ChatGPT,"🔮 ChatGPT Desktop Application (Mac, Windows and Linux)",53645
+12,13,https://github.com/AntonOsika/gpt-engineer,gpt-engineer,CLI platform to experiment with codegen. Precursor to: https://lovable.dev,53382
+13,14,https://github.com/geekan/MetaGPT,MetaGPT,"🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",52469
+14,15,https://github.com/langflow-ai/langflow,langflow,Langflow is a powerful tool for building and deploying AI-powered agents and workflows.,51579
+15,16,https://github.com/meilisearch/meilisearch,meilisearch,A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.,49764
+16,17,https://github.com/hacksider/Deep-Live-Cam,Deep-Live-Cam,real time face swap and one-click video deepfake with only a single image,44647
+17,18,https://github.com/browser-use/browser-use,browser-use,Make websites accessible for AI agents,44300
+18,19,https://github.com/hiyouga/LLaMA-Factory,LLaMA-Factory,Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024),44255
+19,20,https://github.com/rasbt/LLMs-from-scratch,LLMs-from-scratch,"Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",41969
+20,21,https://github.com/jeecgboot/JeecgBoot,JeecgBoot,🔥「AI 低代码平台」前后端分离 SpringBoot 2.x/3.x，SpringCloud，Ant Design&Vue3，Mybatis，Shiro！强大的代码生成器让前后端代码一键生成，无需写任何代码! 引领AI低代码开发模式 AI生成->OnlineCoding->代码生成->手工MERGE，帮助Java项目解决80%重复工作，让开发更关注业务，提高开发效率、节省成本，同时又不失灵活性,41849
+21,22,https://github.com/microsoft/autogen,autogen,A programming framework for agentic AI 🤖 PyPi: autogen-agentchat Discord: https://aka.ms/autogen-discord Office Hour: https://aka.ms/autogen-officehour,41496
+22,23,https://github.com/Mintplex-Labs/anything-llm,anything-llm,"The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, and more.",41049
+23,24,https://github.com/hpcaitech/ColossalAI,ColossalAI,"Making large AI models cheaper, faster and more accessible",40600
+24,25,https://github.com/Kong/kong,kong,🦍 The Cloud-Native API Gateway and AI Gateway.,40356
+25,26,https://github.com/apachecn/ailearning,ailearning,AiLearning：数据分析+机器学习实战+线性代数+PyTorch+NLTK+TF2,40333
+26,27,https://github.com/ClickHouse/ClickHouse,ClickHouse,ClickHouse® is a real-time analytics database management system,39532
+27,28,https://github.com/apache/airflow,airflow,"Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",39174
+28,29,https://github.com/LC044/WeChatMsg,WeChatMsg,提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手,38042
+29,30,https://github.com/QuivrHQ/quivr,quivr,"Opiniated RAG for integrating GenAI in your apps 🧠   Focus on your product rather than the RAG. Easy integration in existing products with customisation!  Any LLM: GPT4, Groq, Llama. Any Vectorsto...",37534
