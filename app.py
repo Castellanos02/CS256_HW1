@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 import csv
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.urandom(24)
+#app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
@@ -19,11 +20,11 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     access = db.Column(db.Integer, nullable=False)
 
-class github(db.Model):
+class githubdb(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(100), nullable = False)
     description = db.Column(db.String(200), nullable = False)
-    stars = db.Column(db.String(100), nullable=False)
+    stars = db.Column(db.Integer, nullable=False)
     link = db.Column(db.String(200), nullable=False)
 
 class arxiv(db.Model):
@@ -45,7 +46,7 @@ class coursera(db.Model):
     name = db.Column(db.String(100), nullable = False)
     author = db.Column(db.String(100), nullable=False)
     link = db.Column(db.String(200), nullable=False)
-    stars = db.Column(db.String(100), nullable=False)
+    stars = db.Column(db.Float, nullable=False)
     #image = db.Column(db.Integer, nullable=False)
     #skills = db.Column(db.String(100), nullable = False)
 
@@ -81,7 +82,7 @@ class udacity(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(100), nullable = False)
     link = db.Column(db.String(200), nullable=False)
-    stars = db.Column(db.String(100), nullable=True)
+    stars = db.Column(db.Float, nullable=True)
     #image = db.Column(db.Integer, nullable=False)
 
 class documentation(db.Model):
@@ -102,75 +103,121 @@ with app.app_context():
         db.session.add(default_user)
         db.session.commit()     
 
-    with open('csvFiles/arxiv.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            arxiv_entry = arxiv(name=line[3],description=line[5],author=line[4],link=line[2])
-            db.session.add(arxiv_entry)
-            db.session.commit()   
+    if not db.session.query(arxiv).first():
+        with open('csvFiles/arxiv.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue
+                arxiv_entry = arxiv(name=line[3],description=line[5],author=line[4],link=line[2])
+                db.session.add(arxiv_entry)
+                db.session.commit()   
 
-    with open('csvFiles/blogs.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            blog_entry = blogs(name=line[4],author=line[5],link=line[2])
-            db.session.add(blog_entry)
-            db.session.commit()  
+        with open('csvFiles/blogs.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                blog_entry = blogs(name=line[4],author=line[5],link=line[2])
+                db.session.add(blog_entry)
+                db.session.commit()  
 
-    with open('csvFiles/coursera.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            coursera_entry = coursera(name=line[4],author=line[5],link=line[3],stars=line[7])
-            db.session.add(coursera_entry)
-            db.session.commit()  
+        with open('csvFiles/coursera.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                coursera_entry = coursera(name=line[4],author=line[5],link=line[3],stars=float(line[7]))
+                db.session.add(coursera_entry)
+                db.session.commit()  
 
-    with open('csvFiles/documentation.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            doc_entry = documentation(name=line[3],author=line[4],link=line[2],mediaType=line[5])
-            db.session.add(doc_entry)
-            db.session.commit()  
+        with open('csvFiles/documentation.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                doc_entry = documentation(name=line[3],author=line[4],link=line[2],mediaType=line[5])
+                db.session.add(doc_entry)
+                db.session.commit()  
 
-    with open('csvFiles/fastai.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            fastai_entry = fastAi(name=line[4],author=line[5],link=line[2],description=line[6])
-            db.session.add(fastai_entry)
-            db.session.commit()  
-    
-    with open('csvFiles/github.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            github_entry = github(name=line[3],link=line[2],description=line[4],stars=line[5])
-            db.session.add(github_entry)
-            db.session.commit()  
-    
-    with open('csvFiles/googlescholar.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            google_entry = googleScholar(name=line[3],link=line[2],description=line[5],author=line[4])
-            db.session.add(google_entry)
-            db.session.commit() 
+        with open('csvFiles/fastai.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                fastai_entry = fastAi(name=line[4],author=line[5],link=line[2],description=line[6])
+                db.session.add(fastai_entry)
+                db.session.commit()  
+        
+        with open('csvFiles/github.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                github_entry = githubdb(name=line[3],link=line[2],description=line[4],stars=int(line[5]))
+                db.session.add(github_entry)
+                db.session.commit()  
+        
+        with open('csvFiles/googlescholar.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                google_entry = googleScholar(name=line[3],link=line[2],description=line[5],author=line[4])
+                db.session.add(google_entry)
+                db.session.commit() 
 
-    with open('csvFiles/openai.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            openai_entry = openAi(name=line[4],link=line[2])
-            db.session.add(openai_entry)
-            db.session.commit() 
+        with open('csvFiles/openai.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                openai_entry = openAi(name=line[4],link=line[2])
+                db.session.add(openai_entry)
+                db.session.commit() 
 
-    with open('csvFiles/papersWithCode.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            papers_entry = papersWithCode(name=line[3],link=line[2],description=line[5],author=line[4])
-            db.session.add(papers_entry)
-            db.session.commit() 
+        with open('csvFiles/papersWithCode.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue   
+                papers_entry = papersWithCode(name=line[3],link=line[2],description=line[5],author=line[4])
+                db.session.add(papers_entry)
+                db.session.commit() 
 
-    with open('csvFiles/udacity.csv', 'r', encoding='utf-8') as f:
-        csvFile = csv.reader(f)
-        for line in csvFile:   
-            udacity_entry = udacity(name=line[4],link=line[2],stars=line[5])
-            db.session.add(udacity_entry)
-            db.session.commit() 
+        with open('csvFiles/udacity.csv', 'r', encoding='utf-8') as f:
+            csvFile = csv.reader(f)
+            skipHeader = 1
+            for line in csvFile:
+                if skipHeader:
+                    skipHeader = 0
+                    continue
+                star = 0
+                if line[5] != 'null':
+                    star = float(line[5])
+                else:
+                    star = None
+                udacity_entry = udacity(name=line[4],link=line[2],stars=star)
+                db.session.add(udacity_entry)
+                db.session.commit() 
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -195,7 +242,9 @@ def search():
 
 @app.route('/repo_explorer')
 def github():
-    return render_template('repo_explorer.html',is_admin=session.get('is_admin', 0))
+    page = request.args.get('page', 1, type=int)
+    repos = db.session.query(githubdb).order_by(githubdb.stars.desc()).paginate(page=page, per_page=15, error_out=False)
+    return render_template('repo_explorer.html', repos=repos.items, pagination=repos, is_admin=session.get('is_admin', 0))
 
 @app.route('/bookmark')
 def bookmark():
