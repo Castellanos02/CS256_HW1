@@ -1,5 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <style>
+            * {box-sizing: border-box;}
+    
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    
+    </head>
+<body>
 {% extends "header.html" %}
 
+{% block content %}
+<br><br><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for repo in repos %}
+            <tr>
+                <td style="max-width: 150px;"><strong>{{ repo.name }}</strong></td>
+                <td>{{ repo.stars }}</td>
+                <td style="max-width: 600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ repo.description }}</td>
+                <td><a href="{{ repo.link }}" target="_blank">Github Repo</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div>
+    {% if pagination.has_prev %}
+        <a href="{{ url_for('github', page=pagination.prev_num) }}">Previous</a>
+    {% endif %}
+    
+    <span>Page {{ pagination.page }} of {{ pagination.pages }}</span>
+    
+    {% if pagination.has_next %}
+        <a href="{{ url_for('github', page=pagination.next_num) }}">Next</a>
+    {% endif %}
+</div>
+
+{% endblock %}
     
 </body>
 </html>
