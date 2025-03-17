@@ -22,6 +22,10 @@
                   <a class="nav-link" href="{{ url_for('bot') }}">Chatbot</a>
                   <a class="nav-link" href="{{ url_for('contribute') }}">Submit Paper</a>
                   <a class="nav-link" href="{{ url_for('learning') }}">AI Learning Materials</a>
+                  {% if is_admin == 1 %}
+                  <a class="nav-link" href="{{ url_for('approve') }}">Admin Panel</a>&nbsp;
+                  {% endif %}
+                  <a class="nav-link" href="{{ url_for('logout')  }}">Logout</a>
                 </div>
               </div>
             </div>

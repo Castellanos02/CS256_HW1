@@ -111,6 +111,15 @@ class allMedia(db.Model):
     name = db.Column(db.String(100), nullable = False)
     table = db.Column(db.String(100), nullable = False)
 
+class bookmarked(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    mediaId = db.Column(UUID(as_uuid=True))
+    mediaType = db.Column(db.String(100), nullable = False)
+    name = db.Column(db.String(100), nullable = False)
+    table = db.Column(db.String(100), nullable = False)
+
+
+
 with app.app_context():
     db.create_all()
     if not User.query.filter_by(email="admin@gmail.com").first():
