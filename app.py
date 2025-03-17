@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 import csv
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
-from openai import OpenAI
+import openai
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
@@ -13,6 +14,8 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
+client = openai.OpenAI(api_key="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")
+openai.api_key = "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"
 
 db = SQLAlchemy(app)
 
@@ -382,18 +385,38 @@ def github():
 def bookmark():
     return render_template('bookmark.html',is_admin=session.get('is_admin', 0))
 
-@app.route('/AI_chatot', methods=['POST'])
+@app.route('/AI_chatbot', methods=['GET', 'POST'])
 def bot():
-    response = request.form.get('response')
-    completion = client.chat.completions.create(
-        model="gpt-4o-mini",
-        store=True,
-        messages=[
-            {"role": "user", "content": "write a haiku about ai"}
-        ]
-    )
-    return render_template('AI_bot.html',is_admin=session.get('is_admin', 0))
+    # if request.method == 'POST':
+    #     user_input = request.form['user_input']
+        
+    #     response = client.chat.completions.create(
+    #         model="gpt-4",
+    #         messages=[{"role": "user", "content": user_input}]
+    #     )
 
+    #     bot_reply = response.choices[0].message.content
+    if "chat_history" not in session:
+        session["chat_history"] = []  # Initialize chat history
+
+    if request.method == 'POST':
+        user_input = request.form['user_input']
+
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=session["chat_history"] + [{"role": "user", "content": user_input}]
+        )
+
+        bot_reply = response.choices[0].message.content
+
+        # Store messages in session
+        session["chat_history"].append({"role": "user", "content": user_input})
+        session["chat_history"].append({"role": "assistant", "content": bot_reply})
+
+        session.modified = True  # Ensure session updates are saved
+    return render_template('AI_bot.html', chat_history=session["chat_history"])
+    
+    return render_template('AI_bot.html')
 @app.route('/contribute', methods=["GET", "POST"])
 def contribute():
     if request.method == "POST":
