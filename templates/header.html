@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <div tesxt-align: center;>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -26,4 +27,25 @@
               </div>
             </div>
         </nav>
+=======
+
+    <div>
+        <a href="{{ url_for('home') }}">Home</a>&nbsp;
+        <a href="{{ url_for('search') }}">Search Engine</a>&nbsp;
+        <a href="{{ url_for('github') }}">Github Repositories</a>&nbsp;
+        <a href="{{ url_for('bookmark') }}">Bookmarked</a>&nbsp;
+        <a href="{{ url_for('bot') }}">Chatbot</a>&nbsp;
+        <a href="{{ url_for('contribute') }}">Submit Paper</a>&nbsp;
+        <a href="{{ url_for('learning') }}">AI Learning Materials</a>&nbsp;
+        
+        {% if is_admin == 1 %}
+            <a href="{{ url_for('approve') }}">Admin Panel</a>&nbsp;
+        {% endif %}
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+
+        {% block content %}
+        {% endblock %}
+
+>>>>>>> 8a07eb7550fedd56605870d1b80599d008a8f2d1
     </div>
