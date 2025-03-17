@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, session, request
+from flask import Flask, render_template, redirect, url_for, session, request, jsonify, flash
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
@@ -110,6 +110,28 @@ class allMedia(db.Model):
     mediaType = db.Column(db.String(100), nullable = False)
     name = db.Column(db.String(100), nullable = False)
     table = db.Column(db.String(100), nullable = False)
+
+class bookmarked(db.Model):
+    # id = db.Column(db.Integer, primary_key = True)
+    # userId = db.Column(db.Integer, nullable=False)
+    # mediaType = db.Column(db.String(100), nullable = False)
+    # name = db.Column(db.String(100), nullable = False)
+    # table = db.Column(db.String(100), nullable = False)
+
+    id = db.Column(db.Integer, primary_key = True)
+    userId = db.Column(UUID(as_uuid=True))
+    link = db.Column(db.String(100), nullable=False)
+    mediaType = db.Column(db.String(100), nullable = False)
+    author = db.Column(db.String(100), nullable = False)
+    description = db.Column(db.String(200), nullable = False)
+
+class paper_submission(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(100), nullable = False)
+    email = db.Column(db.String(100), nullable = False)
+    link = db.Column(db.String(100), nullable = False)
+    description = db.Column(db.String(200), nullable = False)
+    
 
 with app.app_context():
     db.create_all()
@@ -306,6 +328,11 @@ def login():
 
 @app.route('/home')
 def home():
+    bookmarked_items = bookmarked.query.filter_by(userId=session.get('user_id')).all()
+    print(f"User ID: {session.get('user_id')}")  
+    print(f"Bookmarked Items: {bookmarked_items}")  
+    if not bookmarked_items:  
+        print("No bookmarks found.")
     return render_template('home.html', is_admin=session.get('is_admin', 0))
 
 @app.route('/search_engine', methods=['GET'])
@@ -377,8 +404,24 @@ def bot():
     '''
     return render_template('AI_bot.html', chatHistory=chatHistory, is_admin=session.get('is_admin', 0))
 
-@app.route('/contribute')
+@app.route('/contribute', methods=["GET", "POST"])
 def contribute():
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        link = request.form.get("link")
+        description = request.form.get("description")
+
+        if not name or not email or not link or not description:
+            flash("All fields are required!", "danger")
+            return redirect("/")
+        
+        new_addition = paper_submission(name=name, email=email, link=link, description=description)
+        db.session.add(new_addition)
+        db.session.commit()
+
+        return redirect(url_for('home'))
+
     return render_template('contribute.html',is_admin=session.get('is_admin', 0))
 
 @app.route('/learning_material')
@@ -389,12 +432,32 @@ def learning():
 def approve():
     if session.get('is_admin') != 1:
         return render_template('login.html')
-    return render_template('approve_page.html',is_admin=session.get('is_admin', 0))
+    pending_submission = paper_submission.query.all()
+    return render_template('approve_page.html',is_admin=session.get('is_admin', 0), pending_submission=pending_submission)
 
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('login'))
+
+@app.route('/add_entry', methods=['POST'])
+def add_entry():
+
+    data = request.json
+    print("Received data:", data)
+    print("Session ID:", session.get('user_id'))
+    # entry = bookmarked(userId=session.get('user_id'),link=data['link'], mediaType=data['mediaType'], author=data['author'], description=data.get("description"))
+    if data['description']:
+        entry = bookmarked(userId=session.get('user_id'),link=data['link'], mediaType=data['mediaType'], author=data['author'], description=data["description"])
+    else:
+        entry = bookmarked(userId=session.get('user_id'),link=data['link'], mediaType=data['mediaType'], author=data['author'], description="")
+    print(entry)
+    db.session.add(entry)
+    db.session.commit()     
+
+    return jsonify({"message": "Bookmark added successfully!"})  # No redirect!
+    # return jsonify({"message": "Bookmark added successfully!"})
+
 
 if __name__ == '__main__':
     app.run()

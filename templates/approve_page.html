@@ -1,5 +1,29 @@
 {% extends "header.html" %}
-
+{% block content %}
+<h1>Paper Submissions</h1>
     
+{% if pending_submission %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Link</th>
+            <th>Description</th>
+        </tr>
+        {% for pending_submission in pending_submission %}
+        <tr>
+            <td>{{ pending_submission.id }}</td>
+            <td>{{ pending_submission.name }}</td>
+            <td>{{ pending_submission.email }}</td>
+            <td><a href="{{ pending_submission.link }}" target="_blank">View Paper</a></td>
+            <td>{{ pending_submission.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No submissions found.</p>
+{% endif %}
+
+{% endblock %}    
 </body>
 </html>
