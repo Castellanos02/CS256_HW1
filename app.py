@@ -422,7 +422,8 @@ def learning():
 def approve():
     if session.get('is_admin') != 1:
         return render_template('login.html')
-    return render_template('approve_page.html',is_admin=session.get('is_admin', 0))
+    pending_submission = paper_submission.query.all()
+    return render_template('approve_page.html',is_admin=session.get('is_admin', 0), pending_submission=pending_submission)
 
 @app.route('/logout')
 def logout():
