@@ -1,4 +1,53 @@
-{% extends "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 30px;
+            justify-content: center;
+        }
 
+        .result-box {
+            width: 500px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .center {
+            text-align: center;
+        }                  
+    </style>
+</head>
+<br>
+{% extends "header.html" %}
+{% block content %}
+<br><br><br>
+
+    <div class="center">
+    <h2>Bookmarked Items</h2>
+    </div>
+    <div class='results-container'>
+    {% if bookmarked_items %}
+        
+
+        <div class='result-box'>
+        <ul>
+            {% for item in bookmarked_items %}
+                <li><a href="{{item.link}}">{{item.name}}</a> ({{item.mediaType}})</li>
+            {% endfor %}
+        </ul>
+        </div>
+    {% else %}
+        <p>No bookmarks yet!</p>
+    {% endif %}
+    </div>
+{% endblock %}
 </body>
 </html>

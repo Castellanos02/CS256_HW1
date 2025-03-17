@@ -95,6 +95,15 @@
     <tbody>
         {% for r in results %}
         <div class='result-box'>
+<a href="#" class="add-bookmark"
+   data-name="{{ r.name }}"
+   data-link="{{ r.link }}"
+   data-author="{{ r.author }}"
+   data-type="{{ r.mediaType }}"
+   data-stars="{{ r.stars }}"
+   data-description="{{ r.description }}">
+    Bookmark
+</a>
             <h3>{{ r.name }}</h3>
             <a href='{{ r.link }}'>Link</a>
             <p>Author(s):<br>{{ r.author }}</p>
@@ -123,7 +132,41 @@
     {% endif %}
 </div>
 
-{% endblock %}
+<script>
+    document.querySelectorAll('.add-bookmark').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
     
+            const data = {
+                name: this.getAttribute('data-name'),
+                link: this.getAttribute('data-link'),
+                author: this.getAttribute('data-author'),
+                mediaType: this.getAttribute('data-type'),
+                stars: this.getAttribute('data-stars') || null,
+                description: this.getAttribute('data-description') || null
+            };
+    
+            fetch('/add_entry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())  
+            .then(data => {
+                alert(data.message); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to add bookmark.');
+            });
+        });
+    });
+    </script>
+    
+{% endblock %}
+
+
 </body>
 </html>
