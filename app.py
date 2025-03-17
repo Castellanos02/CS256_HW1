@@ -14,8 +14,6 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
-client = openai.OpenAI(api_key="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")
-openai.api_key = "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"
 
 db = SQLAlchemy(app)
 
