@@ -1,5 +1,53 @@
 {% extends "header.html" %}
+{% block content %}
+<h2>Enter User Data</h2>
 
-    
+<form name="userForm" method="POST" onsubmit="return validateForm()">
+    <label>Name:</label>
+    <input type="text" name="name" id="name">
+    <span id="name-error"></span>
+    <br>
+
+    <label>Email:</label>
+    <input type="email" name="email" id="email">
+    <span id="email-error"></span>
+    <br>
+
+    <label>Link:</label>
+    <input type="text" name="link" id="link">
+    <span id="link-error"></span>
+    <br>
+
+    <label>Description:</label>
+    <textarea name="description" id="description"></textarea>
+    <span id="description-error"></span>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateForm() {
+        let isValid = true;
+        let fields = ["name", "email", "link", "description"];
+
+        fields.forEach(field => {
+            let input = document.getElementById(field);
+            let errorSpan = document.getElementById(field + "-error");
+
+            if (input.value.trim() === "") {
+                input.classList.add("error");
+                errorSpan.textContent = "This field is required";
+                isValid = false;
+            } else {
+                input.classList.remove("error");
+                errorSpan.textContent = "";
+            }
+        });
+
+        return isValid;
+    }
+</script>
+{% endblock %}
 </body>
 </html>

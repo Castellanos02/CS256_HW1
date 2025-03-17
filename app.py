@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, session, request, jsonify
+from flask import Flask, render_template, redirect, url_for, session, request, jsonify, flash
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
@@ -394,8 +394,24 @@ def bot():
     )
     return render_template('AI_bot.html',is_admin=session.get('is_admin', 0))
 
-@app.route('/contribute')
+@app.route('/contribute', methods=["GET", "POST"])
 def contribute():
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        link = request.form.get("link")
+        description = request.form.get("description")
+
+        if not name or not email or not link or not description:
+            flash("All fields are required!", "danger")
+            return redirect("/")
+        
+        new_addition = paper_submission(name=name, email=email, link=link, description=description)
+        db.session.add(new_addition)
+        db.session.commit()
+
+        return redirect(url_for('home'))
+
     return render_template('contribute.html',is_admin=session.get('is_admin', 0))
 
 @app.route('/learning_material')
