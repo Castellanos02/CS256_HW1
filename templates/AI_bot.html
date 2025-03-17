@@ -79,7 +79,7 @@
 <div class="chat-container">
     <h2>Chat with AI</h2>
 
-    <div class="chat-box">
+    <div class="chat-box", id="chat-box">
         {% for message in chat_history %}
             <div class="message {% if message.role == 'user' %}user{% else %}bot{% endif %}">
                 <p><strong>{% if message.role == 'user' %}You{% else %}AI{% endif %}:</strong> {{ message.content }}</p>
@@ -92,6 +92,16 @@
         <button type="submit">Send</button>
     </form>
 </div>
+
+<script>
+    function scrollToBottom() {
+        var chatBox = document.getElementById("chat-box");
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    window.onload = scrollToBottom;
+</script>
+
 {% endblock %}
 
 </body>

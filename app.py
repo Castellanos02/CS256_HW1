@@ -10,7 +10,7 @@ import openai
 
 app = Flask(__name__)
 load_dotenv()
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
@@ -314,8 +314,8 @@ with app.app_context():
             db.session.add(media_entry)
             db.session.commit()
 
-    client = OpenAI()
-    chatHistory = {"user":""}
+    # client = OpenAI()
+    # chatHistory = {"use   r":""}
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -446,26 +446,8 @@ def bookmark():
 
 @app.route('/chatbot', methods=['GET','POST'])
 def bot():
-    # message = request.form['message']
-    # chatHistory['user'] = "hi"
-    # '''
-    # response = client.responses.create(
-    #     model="gpt-4o-mini",
-    #     store=True,
-    #     input=[
-    #         {
-    #             "role": "user",
-    #             "content": "Hello, world!"}
-    #     ]
-    # )
-
-    # print(response.output_text)'
-    # '''
-    # return render_template('AI_bot.html', chatHistory=chatHistory, is_admin=session.get('is_admin', 0))
-
-    #     bot_reply = response.choices[0].message.content
     if "chat_history" not in session:
-        session["chat_history"] = []  # Initialize chat history
+        session["chat_history"] = []
 
     if request.method == 'POST':
         user_input = request.form['user_input']
@@ -477,11 +459,10 @@ def bot():
 
         bot_reply = response.choices[0].message.content
 
-        # Store messages in session
         session["chat_history"].append({"role": "user", "content": user_input})
         session["chat_history"].append({"role": "assistant", "content": bot_reply})
 
-        session.modified = True  # Ensure session updates are saved
+        session.modified = True
     return render_template('AI_bot.html', chat_history=session["chat_history"])    
 @app.route('/contribute', methods=["GET", "POST"])
 def contribute():
