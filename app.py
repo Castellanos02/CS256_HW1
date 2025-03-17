@@ -8,8 +8,8 @@ import uuid
 from openai import OpenAI
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
-#app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+load_dotenv()
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
@@ -288,6 +288,9 @@ with app.app_context():
             db.session.add(media_entry)
             db.session.commit()
 
+    client = OpenAI()
+    chatHistory = {"user":""}
+
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -355,17 +358,24 @@ def github():
 def bookmark():
     return render_template('bookmark.html',is_admin=session.get('is_admin', 0))
 
-@app.route('/AI_chatot', methods=['POST'])
+@app.route('/chatbot', methods=['GET','POST'])
 def bot():
-    response = request.form.get('response')
-    completion = client.chat.completions.create(
+    message = request.form['message']
+    chatHistory['user'] = "hi"
+    '''
+    response = client.responses.create(
         model="gpt-4o-mini",
         store=True,
-        messages=[
-            {"role": "user", "content": "write a haiku about ai"}
+        input=[
+            {
+                "role": "user",
+                "content": "Hello, world!"}
         ]
     )
-    return render_template('AI_bot.html',is_admin=session.get('is_admin', 0))
+
+    print(response.output_text)'
+    '''
+    return render_template('AI_bot.html', chatHistory=chatHistory, is_admin=session.get('is_admin', 0))
 
 @app.route('/contribute')
 def contribute():
