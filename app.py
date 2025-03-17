@@ -9,8 +9,8 @@ import openai
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
-#app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+load_dotenv()
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
@@ -121,9 +121,12 @@ class bookmarked(db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
     userId = db.Column(UUID(as_uuid=True))
+    mediaId = db.Column(UUID(as_uuid=True))
+    name = db.Column(db.String(100), nullable = False)
     link = db.Column(db.String(100), nullable=False)
     mediaType = db.Column(db.String(100), nullable = False)
-    author = db.Column(db.String(100), nullable = False)
+    stars = db.Column(db.Float, nullable=True)
+    author = db.Column(db.String(100), nullable = True)
     description = db.Column(db.String(200), nullable = False)
 
 class paper_submission(db.Model):
@@ -311,6 +314,9 @@ with app.app_context():
             db.session.add(media_entry)
             db.session.commit()
 
+    client = OpenAI()
+    chatHistory = {"user":""}
+
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -333,11 +339,42 @@ def home():
         print("No bookmarks found.")
     return render_template('home.html', is_admin=session.get('is_admin', 0))
 
-@app.route('/search_engine', methods=['GET'])
+@app.route('/search_engine', methods=['GET', 'POST'])
 def search():
     tableMap = {"github" : githubdb, "papersWithCode" : papersWithCode, "udacity" : udacity,
                  "coursera" : coursera, "arxiv" : arxiv, "blogs" : blogs, "fastAi" : fastAi,
                    "openAi" : openAi, "documentation" : documentation, "googleScholar" : googleScholar}
+    #poop
+    if 'bookmark' in request.form:
+        bookmark = request.form.get("bookmark")
+        bmId = uuid.UUID(request.form.get("id"))
+        if bookmark=='Bookmark':
+            print('add')
+            bmName = request.form.get("name")
+            bmAuthor = request.form.get("author")
+            bmStars = request.form.get("stars")
+            if bmStars:
+                bmStars = float(bmStars)
+            else:
+                bmStars = None
+            bmMedia = request.form.get("mediaType")
+            bmLink = request.form.get("link")
+            bmDesc = request.form.get("description")
+            bm_entry = bookmarked(mediaId=bmId, mediaType=bmMedia, name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=bmAuthor, stars=bmStars)
+            db.session.add(bm_entry)
+            db.session.commit()
+        else:
+            print("delete")
+            remove = db.session.query(bookmarked).filter(bookmarked.mediaId==bmId, bookmarked.userId==session['user_id']).first()
+            print(remove)
+            if remove:
+                print("in")
+                db.session.delete(remove)
+                db.session.commit()
+
+    bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session['user_id']).all()
+    bookmarks = [i[0] for i in bookmarks]
+    print(bookmarks)
     
     page = request.args.get('page', 1, type=int)
     query = request.args.get('query', '', type=str)
@@ -371,27 +408,60 @@ def search():
     end = start + 12
     queryResults = queryResults[start:end]
 
-    return render_template('search_engine.html', results=queryResults, page=page, total_pages=total_pages, query=query, media=media, is_admin=session.get('is_admin', 0))
+    return render_template('search_engine.html', results=queryResults, page=page, total_pages=total_pages, query=query, media=media, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
 
-@app.route('/repo_explorer')
+@app.route('/repo_explorer', methods=['GET','POST'])
 def github():
+    if 'bookmark' in request.form:
+        bookmark = request.form.get("bookmark")
+        bmId = uuid.UUID(request.form.get("id"))
+        bmName = request.form.get("name")
+        bmLink = request.form.get("link")
+        bmDesc = request.form.get("description")
+        if bookmark=='Bookmark':
+            print("add")
+            print(type(session['user_id']))
+            bm_entry = bookmarked(mediaId=bmId, mediaType="Github Repo", name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=None)
+            db.session.add(bm_entry)
+            db.session.commit()
+        else:
+            print("delete")
+            remove = db.session.query(bookmarked).filter(bookmarked.mediaId==bmId, bookmarked.userId==session['user_id']).first()
+            print(remove)
+            if remove:
+                print("in")
+                db.session.delete(remove)
+                db.session.commit()
+
+    bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session['user_id']).all()
+    bookmarks = [i[0] for i in bookmarks]
+    print(bookmarks)
     page = request.args.get('page', 1, type=int)
     repos = db.session.query(githubdb).order_by(githubdb.stars.desc()).paginate(page=page, per_page=15, error_out=False)
-    return render_template('repo_explorer.html', repos=repos.items, pagination=repos, is_admin=session.get('is_admin', 0))
+    return render_template('repo_explorer.html', repos=repos.items, pagination=repos, bookmarks=bookmarks, page=page, is_admin=session.get('is_admin', 0))
 
 @app.route('/bookmark')
 def bookmark():
     return render_template('bookmark.html',is_admin=session.get('is_admin', 0))
 
-@app.route('/AI_chatbot', methods=['GET', 'POST'])
+@app.route('/chatbot', methods=['GET','POST'])
 def bot():
-    # if request.method == 'POST':
-    #     user_input = request.form['user_input']
-        
-    #     response = client.chat.completions.create(
-    #         model="gpt-4",
-    #         messages=[{"role": "user", "content": user_input}]
-    #     )
+    # message = request.form['message']
+    # chatHistory['user'] = "hi"
+    # '''
+    # response = client.responses.create(
+    #     model="gpt-4o-mini",
+    #     store=True,
+    #     input=[
+    #         {
+    #             "role": "user",
+    #             "content": "Hello, world!"}
+    #     ]
+    # )
+
+    # print(response.output_text)'
+    # '''
+    # return render_template('AI_bot.html', chatHistory=chatHistory, is_admin=session.get('is_admin', 0))
 
     #     bot_reply = response.choices[0].message.content
     if "chat_history" not in session:
@@ -412,9 +482,7 @@ def bot():
         session["chat_history"].append({"role": "assistant", "content": bot_reply})
 
         session.modified = True  # Ensure session updates are saved
-    return render_template('AI_bot.html', chat_history=session["chat_history"])
-    
-    return render_template('AI_bot.html')
+    return render_template('AI_bot.html', chat_history=session["chat_history"])    
 @app.route('/contribute', methods=["GET", "POST"])
 def contribute():
     if request.method == "POST":

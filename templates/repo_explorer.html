@@ -41,6 +41,7 @@
             <th>Stars</th>
             <th>Description</th>
             <th>Link</th>
+            <th>Bookmark</th>
         </tr>
     </thead>
     <tbody>
@@ -50,6 +51,15 @@
                 <td>{{ repo.stars }}</td>
                 <td style="max-width: 600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ repo.description }}</td>
                 <td><a href="{{ repo.link }}" target="_blank">Github Repo</a></td>
+                <td>
+                    <form action="/repo_explorer?page={{ page }}" method="POST">
+                    <input type="submit" name="bookmark" value="{% if repo.id in bookmarks %}Unbookmark{% else %}Bookmark{% endif %}">
+                    <input type="hidden" name="id" value="{{ repo.id }}">
+                    <input type="hidden" name="name" value="{{ repo.name }}">
+                    <input type="hidden" name="link" value="{{ repo.link }}">
+                    <input type="hidden" name="description" value="{{ repo.decription }}">
+                    </form>
+                </td>
             </tr>
         {% endfor %}
     </tbody>
@@ -57,13 +67,13 @@
 
 <div class="pagination-box">
     {% if page > 1 %}
-        <a href="{{ url_for('search', page=page-1) }}">Previous</a>
+        <a href="{{ url_for('github', page=page-1) }}">Previous</a>
     {% endif %}
     &nbsp;&nbsp;&nbsp;
-    <span>Page {{ page }} of {{ total_pages }}</span>
+    <span>Page {{ page }} of {{ pagination.pages }}</span>
     &nbsp;&nbsp;&nbsp;
-    {% if page < total_pages %}
-        <a href="{{ url_for('search', page=page+1) }}">Next</a>
+    {% if page < pagination.pages %}
+        <a href="{{ url_for('github', page=page+1) }}">Next</a>
     {% endif %}
 </div>
 
