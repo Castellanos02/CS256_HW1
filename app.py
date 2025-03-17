@@ -339,6 +339,33 @@ def home():
         print("No bookmarks found.")
     return render_template('home.html', is_admin=session.get('is_admin', 0))
 
+@app.route('/create_user', methods=['GET', 'POST'])
+def create():
+    error=None
+    if request.method == 'POST':
+        user_name = request.form['user_name']
+        password = request.form['password']
+        email = request.form['email']
+        existing_user = User.query.filter((User.user_name == user_name) | (User.email == email)).first()
+        if existing_user:
+            if existing_user.user_name == user_name and existing_user.email == email:
+                error = "Username and Email already in use"
+            elif existing_user.email == email:
+                error = "Email already in use"
+            elif existing_user.user_name == user_name:
+                error = "Username already in use"
+        else:
+            new_user = User(user_name=user_name, password=password, email=email, access=0)
+            db.session.add(new_user)
+            db.session.commit()
+
+            session['user_id'] = new_user.id
+            session['is_admin'] = new_user.access
+            return redirect(url_for('home'))
+    return render_template('create_user.html', error=error)
+
+
+
 @app.route('/search_engine', methods=['GET', 'POST'])
 def search():
     tableMap = {"github" : githubdb, "papersWithCode" : papersWithCode, "udacity" : udacity,
