@@ -1,4 +1,4 @@
-## CS 256 Homework
+## CS 256 Homework User Guide & Documentation
 
 
 ### Contributors 
