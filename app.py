@@ -17,6 +17,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "dat
 
 db = SQLAlchemy(app)
 
+'''
+Database Tables:
+'''
+
 class User(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
     user_name = db.Column(db.String(100),unique=True, nullable = False)
@@ -138,6 +142,11 @@ class paper_submission(db.Model):
     link = db.Column(db.String(100), nullable = False)
     description = db.Column(db.String(200), nullable = False)
     
+'''
+Once app initiates, database creates tables and places a user and admin account into the User table
+Also checks if the arxiv database table is populated. If not, it will read all the csv files to
+populate all database tables.
+'''
 
 with app.app_context():
     db.create_all()
@@ -316,6 +325,9 @@ with app.app_context():
             db.session.add(media_entry)
             db.session.commit()
 
+'''
+Allows registered users to log in
+'''
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -329,6 +341,10 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html')
 
+'''
+Displays all of the items that the user has bookmarked. Handles unbookmarking items
+in the home page.
+'''
 @app.route('/home', methods=['GET','POST'])
 def home():
     if 'bookmark' in request.form:
@@ -367,6 +383,9 @@ def home():
         print("No bookmarks found.")
     return render_template('home.html', bookmarked_items=bookmarked_items, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
 
+'''
+Creates a new account for the user to use the website
+'''
 @app.route('/create_user', methods=['GET', 'POST'])
 def create():
     error=None
@@ -397,6 +416,10 @@ def search():
 
     return render_template('search_engine.html', is_admin=session.get('is_admin', 0))
 
+'''
+Displays trending AI Github repositories. Allows users to bookmark/unbookmark
+Github repositories.
+'''
 @app.route('/repo_explorer', methods=['GET','POST'])
 def github():
     if 'bookmark' in request.form:
@@ -432,6 +455,9 @@ def github():
 def bookmark():
     return render_template('bookmark.html',is_admin=session.get('is_admin', 0))
 
+'''
+Allows the user to interact with a chatbot with the OpenAI API
+'''
 @app.route('/chatbot', methods=['GET','POST'])
 def bot():
     if "chat_history" not in session:
@@ -451,7 +477,11 @@ def bot():
         session["chat_history"].append({"role": "assistant", "content": bot_reply})
 
         session.modified = True
-    return render_template('AI_bot.html', chat_history=session["chat_history"])    
+    return render_template('AI_bot.html', chat_history=session["chat_history"])   
+
+'''
+Allows the user to submit a new research paper into the database
+''' 
 @app.route('/contribute', methods=["GET", "POST"])
 def contribute():
     if request.method == "POST":
@@ -472,6 +502,11 @@ def contribute():
 
     return render_template('contribute.html',is_admin=session.get('is_admin', 0))
 
+'''
+Displays data stored in the database for the user including research papers, 
+github repositories, courses, blogs, etc. Allows user to search for specific queries
+and filter specific media types.
+'''
 @app.route('/learning_material', methods=['GET','POST'])
 def learning():
     tableMap = {"github" : githubdb, "papersWithCode" : papersWithCode, "udacity" : udacity,
@@ -513,7 +548,7 @@ def learning():
     query = request.args.get('query', '', type=str)
     media = request.args.get('media')
 
-    print(media)
+    #print(media)
 
     emptyQ = False
     if query == '':
@@ -543,7 +578,9 @@ def learning():
     
     return render_template('learn_materials.html', results=queryResults, page=page, total_pages=total_pages, query=query, media=media, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
 
-
+'''
+Allows admins to approve research papers submitted by users
+'''
 @app.route('/approve')
 def approve():
     if session.get('is_admin') != 1:
@@ -551,6 +588,9 @@ def approve():
     pending_submission = paper_submission.query.all()
     return render_template('approve_page.html',is_admin=session.get('is_admin', 0), pending_submission=pending_submission)
 
+'''
+Allows users to log out of their account
+'''
 @app.route('/logout')
 def logout():
     session.clear()
