@@ -1,4 +1,182 @@
-{% extends "header.html" %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <style>
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 30px;
+            justify-content: center;
+        }
+
+        .result-box {
+            width: 500px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .result-box h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .result-box p {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .pagination-box {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 30px;
+        }
+
+        * {box-sizing: border-box;}
+
+        .search-box {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            display:flex;
+            align-items: center; 
+            gap:15px;
+            height:30px;
+            width:200px;
+        }
+
+        button {
+            height:30px;
+            width:75px;
+            text-align:center;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<br>
+{% extends 'header.html' %}
+<br><br>
+{% block content %}
+<br><br><br><br>
+<div class='search-box'>
+    <form action='/search_engine' method='GET'>
+    <label for='dropdown'>Media</label>
+        <select id='dropdown' name='media'>
+            <option value='All' {% if media=='All' %} selected {% endif %}>All</option>
+            <option value='Github Repo' {% if media=='Github Repo' %} selected {% endif %}>Github Repo</option>
+            <option value='Research' {% if media=='Research' %} selected {% endif %}>Research</option>
+            <option value='Course' {% if media=='Course' %} selected {% endif %}>Course</option>
+            <option value='Blogs' {% if media=='Blogs' %} selected {% endif %}>Blogs</option>
+            <option value='Documentation' {% if media=='Documentation' %} selected {% endif %}>Documentation</option>
+        </select>
+        <input type='text' name='query' placeholder='Enter search query' value='{{ query }}'>
+        <button type='submit'>Search</button>
+    </form>
+</div>
+
+<div class='results-container'>
+    <tbody>
+        {% for r in results %}
+        <div class='result-box'>
+<a href="#" class="add-bookmark"
+   data-name="{{ r.name }}"
+   data-link="{{ r.link }}"
+   data-author="{{ r.author }}"
+   data-type="{{ r.mediaType }}"
+   data-stars="{{ r.stars }}"
+   data-description="{{ r.description }}">
+    Bookmark
+</a>
+            <form action="/search_engine?page={{ page }}&query={{ query }}&media={{ media }}" method="POST">
+                <input type="submit" name="bookmark" value="{% if r.id in bookmarks %}Unbookmark{% else %}Bookmark{% endif %}">
+                <input type="hidden" name="id" value="{{ r.id }}">
+                <input type="hidden" name="name" value="{{ r.name }}">
+                <input type="hidden" name="author" value="{{ r.author }}">
+                <input type="hidden" name="stars" value="{{ r.stars }}">
+                <input type="hidden" name="mediaType" value="{{ r.mediaType }}">
+                <input type="hidden" name="link" value="{{ r.link }}">
+                <input type="hidden" name="description" value="{{ r.decription }}">
+            </form>
+            <h3>{{ r.name }}</h3>
+            <a href='{{ r.link }}'>Link</a>
+            <p>Author(s):<br>{{ r.author }}</p>
+            <p>Type: {{ r.mediaType }}</p>
+            {% if r.stars %}
+                <p>Stars:<br>{{ r.stars }} ⭐</p>
+            {% endif %}
+
+            {% if r.description %}
+                <p>Description:<br>{{ r.description }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </tbody>
+</div>
+
+<div class='pagination-box'>
+    {% if page > 1 %}
+        <a href='{{ url_for("search", page=page-1, query=query, media=media) }}'>Previous</a>
+    {% endif %}
+    &nbsp;&nbsp;&nbsp;
+    <span>Page {{ page }} of {{ total_pages }}</span>
+    &nbsp;&nbsp;&nbsp;
+    {% if page < total_pages %}
+        <a href='{{ url_for("search", page=page+1, query=query, media=media) }}'>Next</a>
+    {% endif %}
+</div>
+
+<script>
+    document.querySelectorAll('.add-bookmark').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const data = {
+                name: this.getAttribute('data-name'),
+                link: this.getAttribute('data-link'),
+                author: this.getAttribute('data-author'),
+                mediaType: this.getAttribute('data-type'),
+                stars: this.getAttribute('data-stars') || null,
+                description: this.getAttribute('data-description') || null
+            };
+    
+            fetch('/add_entry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())  
+            .then(data => {
+                alert(data.message); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to add bookmark.');
+            });
+        });
+    });
+    </script>
+    
+{% endblock %}
+
 
 </body>
 </html>

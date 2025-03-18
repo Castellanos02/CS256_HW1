@@ -100,17 +100,6 @@
     <tbody>
         {% for r in results %}
         <div class='result-box'>
-<!--
-<a href="#" class="add-bookmark"
-   data-name="{{ r.name }}"
-   data-link="{{ r.link }}"
-   data-author="{{ r.author }}"
-   data-type="{{ r.mediaType }}"
-   data-stars="{{ r.stars }}"
-   data-description="{{ r.description }}">
-    Bookmark
-</a>
--->
             <h3>{{ r.name }}</h3>
             <a href='{{ r.link }}'>Link</a>
             <p>Author(s):<br>{{ r.author }}</p>

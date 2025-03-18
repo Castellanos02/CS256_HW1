@@ -1,29 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 30px;
+            justify-content: center;
+        }
+
+        .result-box {
+            width: 500px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+        .center {
+            text-align: center;
+        }                  
+    </style>
+</head>
+<br>
+
 {% extends "header.html" %}
 {% block content %}
-<h1>Paper Submissions</h1>
-    
-{% if pending_submission %}
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Link</th>
-            <th>Description</th>
-        </tr>
-        {% for pending_submission in pending_submission %}
-        <tr>
-            <td>{{ pending_submission.id }}</td>
-            <td>{{ pending_submission.name }}</td>
-            <td>{{ pending_submission.email }}</td>
-            <td><a href="{{ pending_submission.link }}" target="_blank">View Paper</a></td>
-            <td>{{ pending_submission.description }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-{% else %}
-    <p>No submissions found.</p>
-{% endif %}
+<br><br><br>
 
-{% endblock %}    
+    <div class="center">
+    <h2>Bookmarked Items</h2>
+    </div>
+    
+    {% if pending_submission %}
+        <div class='results-container'>
+            <tbody>
+            {% for item in pending_submission %}
+                {% if item.approved == "Waiting Approval"%}
+                <div class='result-box'>
+                    <h3>{{item.paper_title}}</h3>
+                    <p>Link: <br> <a href="{{item.link}}">{{item.name}}</a> </p>
+                    <p>Author(s):<br> {{item.authors}}</p>
+                    <p>Description:<br> {{item.description}}</p>
+                    <p>Status:<br> {{item.approved}}</p>
+                    <form action="{{ url_for('paper_decision', paper_id=item.id, decision='Denied') }}" method="POST">
+                        <button type="submit">
+                            Deny
+                        </button>
+                    </form>
+                    <br>
+                    <form action="{{ url_for('paper_decision', paper_id=item.id, decision='Approved')}}" method="POST">
+                        <button type="submit">
+                            Approve
+                        </button>
+                    </form>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </div>
+    {% else %}
+        <p>No papers submitted yet!</p>
+    {% endif %}
+    </div>
+{% endblock %}
+    
 </body>
 </html>

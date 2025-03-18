@@ -6,6 +6,7 @@ import csv
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 import openai
+import requests
 
 
 app = Flask(__name__)
@@ -14,6 +15,7 @@ app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "database.db")}'
+
 
 db = SQLAlchemy(app)
 
@@ -61,8 +63,6 @@ class coursera(db.Model):
     link = db.Column(db.String(200), nullable=False)
     stars = db.Column(db.Float, nullable=False)
     mediaType = db.Column(db.String(100), nullable = False)
-    #image = db.Column(db.Integer, nullable=False)
-    #skills = db.Column(db.String(100), nullable = False)
 
 class blogs(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
@@ -70,14 +70,12 @@ class blogs(db.Model):
     author = db.Column(db.String(100), nullable=False)
     link = db.Column(db.String(200), nullable=False)
     mediaType = db.Column(db.String(100), nullable = False)
-    #image = db.Column(db.Integer, nullable=False)
 
 class openAi(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
     name = db.Column(db.String(100), nullable = False)
     link = db.Column(db.String(200), nullable=False)
     mediaType = db.Column(db.String(100), nullable = False)
-    #image = db.Column(db.Integer, nullable=False)
 
 class googleScholar(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
@@ -94,7 +92,6 @@ class fastAi(db.Model):
     link = db.Column(db.String(200), nullable=False)
     description = db.Column(db.String(200), nullable = False)
     mediaType = db.Column(db.String(100), nullable = False)
-    #image = db.Column(db.Integer, nullable=False)
 
 class udacity(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
@@ -102,7 +99,6 @@ class udacity(db.Model):
     link = db.Column(db.String(200), nullable=False)
     stars = db.Column(db.Float, nullable=True)
     mediaType = db.Column(db.String(100), nullable = False)
-    #image = db.Column(db.Integer, nullable=False)
 
 class documentation(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
@@ -119,12 +115,6 @@ class allMedia(db.Model):
     table = db.Column(db.String(100), nullable = False)
 
 class bookmarked(db.Model):
-    # id = db.Column(db.Integer, primary_key = True)
-    # userId = db.Column(db.Integer, nullable=False)
-    # mediaType = db.Column(db.String(100), nullable = False)
-    # name = db.Column(db.String(100), nullable = False)
-    # table = db.Column(db.String(100), nullable = False)
-
     id = db.Column(db.Integer, primary_key = True)
     userId = db.Column(UUID(as_uuid=True))
     mediaId = db.Column(UUID(as_uuid=True))
@@ -137,10 +127,13 @@ class bookmarked(db.Model):
 
 class paper_submission(db.Model):
     id = db.Column(db.Integer, primary_key = True)
+    user_id = db.Column(UUID(as_uuid=True))
     name = db.Column(db.String(100), nullable = False)
-    email = db.Column(db.String(100), nullable = False)
+    paper_title = db.Column(db.String(200), nullable = False)
     link = db.Column(db.String(100), nullable = False)
+    authors = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(200), nullable = False)
+    approved = db.Column(db.String(100), nullable=False)
     
 '''
 Once app initiates, database creates tables and places a user and admin account into the User table
@@ -411,10 +404,32 @@ def create():
             return redirect(url_for('home'))
     return render_template('create_user.html', error=error)
 
-@app.route('/search_engine')
+'''
+Creates a search engine using Google API. The user can use this to get material based on the input they provide. The user can filter what type of category they want. 
+'''
+@app.route('/search_engine', methods=['GET', 'POST'])
 def search():
+    query = request.form.get("query")
+    category = request.form.get("category")
+    results = []
 
-    return render_template('search_engine.html', is_admin=session.get('is_admin', 0))
+    if query:
+        if category == "tutorial":
+            query += " AI tutorial"
+        elif category == "research":
+            query += " AI research paper site:arxiv.org OR site:researchgate.net OR site:scholar.google.com"
+        elif category == "github":
+            query += " AI site:github.com"
+        elif category == "course":
+            query += " AI course site:coursera.org OR site:udemy.com OR site:edx.org"
+        elif category == "blog":
+            query += " AI blog site:medium.com OR site:dev.to OR site:towardsdatascience.com"
+
+        url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={API_KEY}&cx={SEARCH_ENGINE_ID}"
+        response = requests.get(url).json()
+        results = response.get("items", [])
+
+    return render_template("search.html", results=results)
 
 '''
 Displays trending AI Github repositories. Allows users to bookmark/unbookmark
@@ -451,9 +466,39 @@ def github():
     repos = db.session.query(githubdb).order_by(githubdb.stars.desc()).paginate(page=page, per_page=15, error_out=False)
     return render_template('repo_explorer.html', repos=repos.items, pagination=repos, bookmarks=bookmarks, page=page, is_admin=session.get('is_admin', 0))
 
-@app.route('/bookmark')
-def bookmark():
-    return render_template('bookmark.html',is_admin=session.get('is_admin', 0))
+'''
+Displays the items a user submitted for approval
+'''
+@app.route('/submitted_report')
+def submitted():
+    submitted_items = paper_submission.query.filter_by(user_id=session.get('user_id')).all()
+    print(f"User ID: {session.get('user_id')}")
+    print(f"Bookmarked Items: {submitted_items}")   
+    if not submitted_items:
+        print("No items found.") 
+    return render_template('submitted_work.html',is_admin=session.get('is_admin', 0), submitted_items=submitted_items)
+
+'''
+Allows the user to delete any papers they submitted
+'''
+@app.route('/delete_paper/<int:paper_id>', methods=['POST'])
+def delete_paper(paper_id):
+    paper = paper_submission.query.get(paper_id)
+
+    db.session.delete(paper)
+    db.session.commit()
+
+    return redirect(url_for('submitted'))
+'''
+Allows the admin to make a decision on the items users submit
+'''
+@app.route('/paper_decision/<int:paper_id>/<string:decision>', methods=['POST'])
+def paper_decision(paper_id, decision):
+    paper = paper_submission.query.get(paper_id)
+    paper.approved = decision
+    db.session.commit()
+
+    return redirect(url_for('approve'))    
 
 '''
 Allows the user to interact with a chatbot with the OpenAI API
@@ -477,30 +522,41 @@ def bot():
         session["chat_history"].append({"role": "assistant", "content": bot_reply})
 
         session.modified = True
-    return render_template('AI_bot.html', chat_history=session["chat_history"])   
+    return render_template('AI_bot.html', is_admin=session.get('is_admin', 0),chat_history=session["chat_history"])   
 
 '''
 Allows the user to submit a new research paper into the database
 ''' 
 @app.route('/contribute', methods=["GET", "POST"])
 def contribute():
+    error_message=None
     if request.method == "POST":
+        user_id = session.get('user_id')
         name = request.form.get("name")
-        email = request.form.get("email")
+        paper_title = request.form.get('paper_title')
         link = request.form.get("link")
+        authors = request.form.get("authors")
         description = request.form.get("description")
+        approved = "Waiting Approval"
 
-        if not name or not email or not link or not description:
+        if not name or not paper_title or not link or not authors or not description:
             flash("All fields are required!", "danger")
             return redirect("/")
         
-        new_addition = paper_submission(name=name, email=email, link=link, description=description)
+        existing_paper = paper_submission.query.filter((paper_submission.paper_title == paper_title) | (paper_submission.link == link)).first()
+
+        if existing_paper:
+            error_message = "A paper with this title or link already exists!"
+            return render_template('contribute.html', is_admin=session.get('is_admin', 0), error_message=error_message)
+
+        
+        new_addition = paper_submission(user_id=user_id,name=name, paper_title=paper_title, link=link, authors=authors, description=description, approved=approved)
         db.session.add(new_addition)
         db.session.commit()
 
-        return redirect(url_for('home'))
+        return redirect(url_for('submitted'))
 
-    return render_template('contribute.html',is_admin=session.get('is_admin', 0))
+    return render_template('contribute.html', is_admin=session.get('is_admin', 0), error_message=error_message)
 
 '''
 Displays data stored in the database for the user including research papers, 
@@ -547,8 +603,6 @@ def learning():
     page = request.args.get('page', 1, type=int)
     query = request.args.get('query', '', type=str)
     media = request.args.get('media')
-
-    #print(media)
 
     emptyQ = False
     if query == '':
@@ -602,7 +656,6 @@ def add_entry():
     data = request.json
     print("Received data:", data)
     print("Session ID:", session.get('user_id'))
-    # entry = bookmarked(userId=session.get('user_id'),link=data['link'], mediaType=data['mediaType'], author=data['author'], description=data.get("description"))
     if data['description']:
         entry = bookmarked(userId=session.get('user_id'),link=data['link'], mediaType=data['mediaType'], author=data['author'], description=data["description"])
     else:
@@ -611,8 +664,7 @@ def add_entry():
     db.session.add(entry)
     db.session.commit()     
 
-    return jsonify({"message": "Bookmark added successfully!"})  # No redirect!
-    # return jsonify({"message": "Bookmark added successfully!"})
+    return jsonify({"message": "Bookmark added successfully!"}) 
 
 
 if __name__ == '__main__':
