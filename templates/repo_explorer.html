@@ -38,6 +38,8 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Contributors</th>
+            <th>Language</th>
             <th>Stars</th>
             <th>Description</th>
             <th>Link</th>
@@ -48,6 +50,8 @@
         {% for repo in repos %}
             <tr>
                 <td style="max-width: 150px;"><strong>{{ repo.name }}</strong></td>
+                <td>{{ repo.author }}</td>
+                <td>{{ repo.language }}</td>
                 <td>{{ repo.stars }}</td>
                 <td style="max-width: 600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ repo.description }}</td>
                 <td><a href="{{ repo.link }}" target="_blank">Github Repo</a></td>
