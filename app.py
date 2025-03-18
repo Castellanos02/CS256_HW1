@@ -31,6 +31,8 @@ class githubdb(db.Model):
     stars = db.Column(db.Integer, nullable=False)
     link = db.Column(db.String(200), nullable=False)
     mediaType = db.Column(db.String(100), nullable = False)
+    author = db.Column(db.String(100), nullable=False)
+    language = db.Column(db.String(100), nullable=True)
 
 class arxiv(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key = True, default=uuid.uuid4)
@@ -236,7 +238,7 @@ with app.app_context():
                 if skipHeader:
                     skipHeader = 0
                     continue   
-                github_entry = githubdb(name=line[3],link=line[2],description=line[4],stars=int(line[5]), mediaType='Github Repo')
+                github_entry = githubdb(name=line[3],link=line[2],description=line[4],stars=int(line[5]), mediaType='Github Repo', author=line[6], language=line[7])
                 db.session.add(github_entry)
                 db.session.commit()  
         githubEntries = db.session.query(githubdb).all()
@@ -339,6 +341,7 @@ def home():
         print("No bookmarks found.")
     return render_template('home.html', is_admin=session.get('is_admin', 0))
 
+<<<<<<< Updated upstream
 @app.route('/create_user', methods=['GET', 'POST'])
 def create():
     error=None
@@ -367,75 +370,12 @@ def create():
 
 
 @app.route('/search_engine', methods=['GET', 'POST'])
+=======
+@app.route('/search_engine')
+>>>>>>> Stashed changes
 def search():
-    tableMap = {"github" : githubdb, "papersWithCode" : papersWithCode, "udacity" : udacity,
-                 "coursera" : coursera, "arxiv" : arxiv, "blogs" : blogs, "fastAi" : fastAi,
-                   "openAi" : openAi, "documentation" : documentation, "googleScholar" : googleScholar}
-    #poop
-    if 'bookmark' in request.form:
-        bookmark = request.form.get("bookmark")
-        bmId = uuid.UUID(request.form.get("id"))
-        if bookmark=='Bookmark':
-            print('add')
-            bmName = request.form.get("name")
-            bmAuthor = request.form.get("author")
-            bmStars = request.form.get("stars")
-            if bmStars:
-                bmStars = float(bmStars)
-            else:
-                bmStars = None
-            bmMedia = request.form.get("mediaType")
-            bmLink = request.form.get("link")
-            bmDesc = request.form.get("description")
-            bm_entry = bookmarked(mediaId=bmId, mediaType=bmMedia, name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=bmAuthor, stars=bmStars)
-            db.session.add(bm_entry)
-            db.session.commit()
-        else:
-            print("delete")
-            remove = db.session.query(bookmarked).filter(bookmarked.mediaId==bmId, bookmarked.userId==session['user_id']).first()
-            print(remove)
-            if remove:
-                print("in")
-                db.session.delete(remove)
-                db.session.commit()
 
-    bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session['user_id']).all()
-    bookmarks = [i[0] for i in bookmarks]
-    print(bookmarks)
-    
-    page = request.args.get('page', 1, type=int)
-    query = request.args.get('query', '', type=str)
-    media = request.args.get('media')
-
-    print(media)
-
-    emptyQ = False
-    if query == '':
-        emptyQ = True
-
-    if media == 'All' and emptyQ:
-        results = db.session.query(allMedia).all()
-    elif media == 'All':
-        results = db.session.query(allMedia).filter(allMedia.name.ilike(f'%{query}%')).all()
-    elif media != 'All' and not emptyQ:
-        results = db.session.query(allMedia).filter(allMedia.name.ilike(f'%{query}%'), allMedia.mediaType==media).all()
-    else:
-        results = db.session.query(allMedia).filter(allMedia.mediaType==media).all()
-
-    queryResults = []
-
-    for i in results:
-        r = db.session.query(tableMap[i.table]).filter(tableMap[i.table].id==i.mediaId)
-        all_r = r.all()
-        if len(all_r) > 0:
-            queryResults.append(all_r[0])
-
-    total_pages = (len(queryResults) // 12) + (1 if len(queryResults) % 12 > 0 else 0)
-    start = (page - 1) * 12
-    end = start + 12
-    queryResults = queryResults[start:end]
-
-    return render_template('search_engine.html', results=queryResults, page=page, total_pages=total_pages, query=query, media=media, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
+    return render_template('search_engine.html', is_admin=session.get('is_admin', 0))
 
 @app.route('/repo_explorer', methods=['GET','POST'])
 def github():
@@ -511,9 +451,77 @@ def contribute():
 
     return render_template('contribute.html',is_admin=session.get('is_admin', 0))
 
-@app.route('/learning_material')
+@app.route('/learning_material', methods=['GET','POST'])
 def learning():
-    return render_template('learn_materials.html',is_admin=session.get('is_admin', 0))
+    tableMap = {"github" : githubdb, "papersWithCode" : papersWithCode, "udacity" : udacity,
+                 "coursera" : coursera, "arxiv" : arxiv, "blogs" : blogs, "fastAi" : fastAi,
+                   "openAi" : openAi, "documentation" : documentation, "googleScholar" : googleScholar}
+    
+    if 'bookmark' in request.form:
+        bookmark = request.form.get("bookmark")
+        bmId = uuid.UUID(request.form.get("id"))
+        if bookmark=='Bookmark':
+            print('add')
+            bmName = request.form.get("name")
+            bmAuthor = request.form.get("author")
+            bmStars = request.form.get("stars")
+            if bmStars:
+                bmStars = float(bmStars)
+            else:
+                bmStars = None
+            bmMedia = request.form.get("mediaType")
+            bmLink = request.form.get("link")
+            bmDesc = request.form.get("description")
+            bm_entry = bookmarked(mediaId=bmId, mediaType=bmMedia, name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=bmAuthor, stars=bmStars)
+            db.session.add(bm_entry)
+            db.session.commit()
+        else:
+            print("delete")
+            remove = db.session.query(bookmarked).filter(bookmarked.mediaId==bmId, bookmarked.userId==session['user_id']).first()
+            print(remove)
+            if remove:
+                print("in")
+                db.session.delete(remove)
+                db.session.commit()
+
+    bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session['user_id']).all()
+    bookmarks = [i[0] for i in bookmarks]
+    print(bookmarks)
+    
+    page = request.args.get('page', 1, type=int)
+    query = request.args.get('query', '', type=str)
+    media = request.args.get('media')
+
+    print(media)
+
+    emptyQ = False
+    if query == '':
+        emptyQ = True
+
+    if media == 'All' and emptyQ:
+        results = db.session.query(allMedia).all()
+    elif media == 'All':
+        results = db.session.query(allMedia).filter(allMedia.name.ilike(f'%{query}%')).all()
+    elif media != 'All' and not emptyQ:
+        results = db.session.query(allMedia).filter(allMedia.name.ilike(f'%{query}%'), allMedia.mediaType==media).all()
+    else:
+        results = db.session.query(allMedia).filter(allMedia.mediaType==media).all()
+
+    queryResults = []
+
+    for i in results:
+        r = db.session.query(tableMap[i.table]).filter(tableMap[i.table].id==i.mediaId)
+        all_r = r.all()
+        if len(all_r) > 0:
+            queryResults.append(all_r[0])
+
+    total_pages = (len(queryResults) // 12) + (1 if len(queryResults) % 12 > 0 else 0)
+    start = (page - 1) * 12
+    end = start + 12
+    queryResults = queryResults[start:end]
+    
+    return render_template('learn_materials.html', results=queryResults, page=page, total_pages=total_pages, query=query, media=media, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
+
 
 @app.route('/approve')
 def approve():
