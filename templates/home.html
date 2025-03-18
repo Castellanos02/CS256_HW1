@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <style>
         .results-container {
             display: flex;
@@ -14,15 +14,65 @@
 
         .result-box {
             width: 500px;
-            padding: 15px;
+            padding: 10px;
             border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             background-color: #f9f9f9;
         }
-        .center {
-            text-align: center;
-        }                  
+
+        .result-box h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .result-box p {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .bookmark-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pagination-box {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 30px;
+        }
+
+        * {box-sizing: border-box;}
+
+        .search-box {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            display:flex;
+            align-items: center; 
+            gap:15px;
+            height:30px;
+            width:200px;
+        }
+
+        button {
+            height:30px;
+            width:75px;
+            text-align:center;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }                
     </style>
 </head>
 <br>
@@ -36,14 +86,34 @@
     <div class='results-container'>
     {% if bookmarked_items %}
         
+        {% for r in bookmarked_items %}
+            <div class='result-box'>
+                <h3>{{ r.name }}</h3>
+                <a href='{{ r.link }}'>Link</a>
+                <p>Author(s):<br>{{ r.author }}</p>
+                <p>Type: {{ r.mediaType }}</p>
+                {% if r.language %}
+                    <p>Language: {{ r.language }}</p>
+                {% endif %}
+                {% if r.stars %}
+                    <p>Stars: {{ r.stars }} ⭐</p>
+                {% endif %}
 
-        <div class='result-box'>
-        <ul>
-            {% for item in bookmarked_items %}
-                <li><a href="{{item.link}}">{{item.name}}</a> ({{item.mediaType}})</li>
-            {% endfor %}
-        </ul>
-        </div>
+                {% if r.description %}
+                    <p>Description:<br>{{ r.description }}</p>
+                {% endif %}
+                <form action="/home" method="POST">
+                    <input type="submit" name="bookmark" value="{% if r.mediaId|string in bookmarks %}Unbookmark{% else %}Bookmark{% endif %}">
+                    <input type="hidden" name="id" value="{{ r.mediaId }}">
+                    <input type="hidden" name="name" value="{{ r.name }}">
+                    <input type="hidden" name="author" value="{{ r.author }}">
+                    <input type="hidden" name="stars" value="{{ r.stars }}">
+                    <input type="hidden" name="mediaType" value="{{ r.mediaType }}">
+                    <input type="hidden" name="link" value="{{ r.link }}">
+                    <input type="hidden" name="description" value="{{ r.description }}">
+                </form>
+            </div>
+        {% endfor %}
     {% else %}
         <p>No bookmarks yet!</p>
     {% endif %}
