@@ -15,12 +15,12 @@
 <body>
 <div class="center">
     <a href="{{ url_for('home') }}">Home</a>&nbsp;
-    <a href="{{ url_for('search', media='All') }}">Search Engine</a>&nbsp;
+    <a href="{{ url_for('search') }}">Search Engine</a>&nbsp;
     <a href="{{ url_for('github') }}">Github Repositories</a>&nbsp;
     <a href="{{ url_for('bookmark') }}">Bookmarked</a>&nbsp;
     <a href="{{ url_for('bot') }}">Chatbot</a>&nbsp;
     <a href="{{ url_for('contribute') }}">Submit Paper</a>&nbsp;
-    <a href="{{ url_for('learning') }}">AI Learning Materials</a>&nbsp;
+    <a href="{{ url_for('learning', media='All') }}">AI Learning Materials</a>&nbsp;
     
     {% if is_admin == 1 %}
         <a href="{{ url_for('approve') }}">Admin Panel</a>&nbsp;
