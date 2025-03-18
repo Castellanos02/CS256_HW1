@@ -131,13 +131,13 @@
 
 <div class='pagination-box'>
     {% if page > 1 %}
-        <a href='{{ url_for("search", page=page-1, query=query, media=media) }}'>Previous</a>
+        <a href='{{ url_for("learning", page=page-1, query=query, media=media) }}'>Previous</a>
     {% endif %}
     &nbsp;&nbsp;&nbsp;
     <span>Page {{ page }} of {{ total_pages }}</span>
     &nbsp;&nbsp;&nbsp;
     {% if page < total_pages %}
-        <a href='{{ url_for("search", page=page+1, query=query, media=media) }}'>Next</a>
+        <a href='{{ url_for("learning", page=page+1, query=query, media=media) }}'>Next</a>
     {% endif %}
 </div>
 
