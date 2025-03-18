@@ -60,8 +60,10 @@
                     <input type="submit" name="bookmark" value="{% if repo.id in bookmarks %}Unbookmark{% else %}Bookmark{% endif %}">
                     <input type="hidden" name="id" value="{{ repo.id }}">
                     <input type="hidden" name="name" value="{{ repo.name }}">
+                    <input type="hidden" name="author" value="{{ repo.author }}">
+                    <input type="hidden" name="stars" value="{{ repo.stars }}">
                     <input type="hidden" name="link" value="{{ repo.link }}">
-                    <input type="hidden" name="description" value="{{ repo.decription }}">
+                    <input type="hidden" name="description" value="{{ repo.description }}">
                     </form>
                 </td>
             </tr>
