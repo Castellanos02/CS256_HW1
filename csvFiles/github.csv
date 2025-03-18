@@ -1,103 +1,103 @@
-index,gid,url,name,description,stars
-0,1,https://github.com/Significant-Gravitas/AutoGPT,AutoGPT,"AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",173441
-1,2,https://github.com/AUTOMATIC1111/stable-diffusion-webui,stable-diffusion-webui,Stable Diffusion web UI,149496
-2,3,https://github.com/open-webui/open-webui,open-webui,"User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",83735
-3,4,https://github.com/langgenius/dify,dify,"Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting y...",82534
-4,5,https://github.com/ChatGPTNextWeb/NextChat,NextChat,✨ Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android |  Linux | Windows,81974
-5,6,https://github.com/supabase/supabase,supabase,"The open source Firebase alternative. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",79266
-6,7,https://github.com/microsoft/generative-ai-for-beginners,generative-ai-for-beginners,"21 Lessons, Get Started Building with Generative AI  🔗 https://microsoft.github.io/generative-ai-for-beginners/",75160
-7,8,https://github.com/fighting41love/funNLP,funNLP,中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、连续英文切割、各种中文词向量、公司名字大全、古诗词库、IT词库、财经词库、成语词库、地名词库...,71692
-8,9,https://github.com/n8n-io/n8n,n8n,"Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",67725
-9,10,https://github.com/AppFlowy-IO/AppFlowy,AppFlowy,"Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",61384
-10,11,https://github.com/lobehub/lobe-chat,lobe-chat,"🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / DeepSeek / Qwen), Knowledge Base (file upload / knowledge manageme...",57734
-11,12,https://github.com/lencx/ChatGPT,ChatGPT,"🔮 ChatGPT Desktop Application (Mac, Windows and Linux)",53647
-12,13,https://github.com/AntonOsika/gpt-engineer,gpt-engineer,CLI platform to experiment with codegen. Precursor to: https://lovable.dev,53389
-13,14,https://github.com/geekan/MetaGPT,MetaGPT,"🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",52537
-14,15,https://github.com/langflow-ai/langflow,langflow,Langflow is a powerful tool for building and deploying AI-powered agents and workflows.,51679
-15,16,https://github.com/meilisearch/meilisearch,meilisearch,A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.,49772
-16,17,https://github.com/hacksider/Deep-Live-Cam,Deep-Live-Cam,real time face swap and one-click video deepfake with only a single image,44659
-17,18,https://github.com/browser-use/browser-use,browser-use,Make websites accessible for AI agents,44563
-18,19,https://github.com/hiyouga/LLaMA-Factory,LLaMA-Factory,Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024),44323
-19,20,https://github.com/rasbt/LLMs-from-scratch,LLMs-from-scratch,"Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",42000
-20,21,https://github.com/jeecgboot/JeecgBoot,JeecgBoot,🔥「AI 低代码平台」前后端分离 SpringBoot 2.x/3.x，SpringCloud，Ant Design&Vue3，Mybatis，Shiro！强大的代码生成器让前后端代码一键生成，无需写任何代码! 引领AI低代码开发模式 AI生成->OnlineCoding->代码生成->手工MERGE，帮助Java项目解决80%重复工作，让开发更关注业务，提高开发效率、节省成本，同时又不失灵活性,41862
-21,22,https://github.com/microsoft/autogen,autogen,A programming framework for agentic AI 🤖 PyPi: autogen-agentchat Discord: https://aka.ms/autogen-discord Office Hour: https://aka.ms/autogen-officehour,41531
-22,23,https://github.com/Mintplex-Labs/anything-llm,anything-llm,"The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, and more.",41097
-23,24,https://github.com/hpcaitech/ColossalAI,ColossalAI,"Making large AI models cheaper, faster and more accessible",40601
-24,25,https://github.com/Kong/kong,kong,🦍 The Cloud-Native API Gateway and AI Gateway.,40363
-25,26,https://github.com/apachecn/ailearning,ailearning,AiLearning：数据分析+机器学习实战+线性代数+PyTorch+NLTK+TF2,40341
-26,27,https://github.com/ClickHouse/ClickHouse,ClickHouse,ClickHouse® is a real-time analytics database management system,39546
-27,28,https://github.com/apache/airflow,airflow,"Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",39178
-28,29,https://github.com/LC044/WeChatMsg,WeChatMsg,提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手,38061
-29,30,https://github.com/QuivrHQ/quivr,quivr,"Opiniated RAG for integrating GenAI in your apps 🧠   Focus on your product rather than the RAG. Easy integration in existing products with customisation!  Any LLM: GPT4, Groq, Llama. Any Vectorsto...",37540
-30,31,https://github.com/LAION-AI/Open-Assistant,Open-Assistant,"OpenAssistant is a chat-based assistant that understands tasks, can interact with third-party systems, and retrieve information dynamically to do so.",37252
-31,32,https://github.com/OpenBB-finance/OpenBB,OpenBB,"Investment Research for Everyone, Everywhere.",36939
-32,33,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily,"坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",36695
-33,34,https://github.com/photoprism/photoprism,photoprism,AI-Powered Photos App for the Decentralized Web 🌈💎✨,36690
-34,35,https://github.com/microsoft/AI-For-Beginners,AI-For-Beginners,"12 Weeks, 24 Lessons, AI for All!",36497
-35,36,https://github.com/ray-project/ray,ray,Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.,36021
-36,37,https://github.com/babysor/MockingBird,MockingBird,🚀AI拟声: 5秒内克隆您的声音并生成任意语音内容 Clone a voice in 5 seconds to generate arbitrary speech in real-time,35961
-37,38,https://github.com/upscayl/upscayl,upscayl,"🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",35745
-38,39,https://github.com/zhayujie/chatgpt-on-wechat,chatgpt-on-wechat,基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT-o1/ DeepSeek/Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。,35725
-39,40,https://github.com/google-research/google-research,google-research,Google Research,35118
-40,41,https://github.com/xitu/gold-miner,gold-miner,🥇掘金翻译计划，可能是世界最大最好的英译中技术社区，最懂读者和译者的翻译平台：,33985
-41,42,https://github.com/unclecode/crawl4ai,crawl4ai,"🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/mEkkMXFG",33448
-42,43,https://github.com/reworkd/AgentGPT,AgentGPT,"🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.",33379
-43,44,https://github.com/Bin-Huang/chatbox,chatbox,"User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)",33323
-44,45,https://github.com/Pythagora-io/gpt-pilot,gpt-pilot,The first real AI developer,32493
-45,46,https://github.com/mendableai/firecrawl,firecrawl,"🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.",31317
-46,47,https://github.com/facebookresearch/fairseq,fairseq,Facebook AI Research Sequence-to-Sequence Toolkit written in Python.,31158
-47,48,https://github.com/explosion/spaCy,spaCy,💫 Industrial-strength Natural Language Processing (NLP) in Python,31138
-48,49,https://github.com/mudler/LocalAI,LocalAI,":robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI,  running on consumer-grade hardware. No GPU required. Runs gguf...",31057
-49,50,https://github.com/mckaywrigley/chatbot-ui,chatbot-ui,AI chat for any model.,30487
-50,51,https://github.com/TabbyML/tabby,tabby,Self-hosted AI coding assistant,30454
-51,52,https://github.com/Shubhamsaboo/awesome-llm-apps,awesome-llm-apps,"Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",19739
-52,53,https://github.com/air-verse/air,air,☁️ Live reload for Go apps,19688
-53,54,https://github.com/dailydotdev/daily,daily,"daily.dev is a professional network for developers to learn, collaborate, and grow together 👩🏽‍💻 👨‍💻",19259
-54,55,https://github.com/stitionai/devika,devika,"Devika is an Agentic AI Software Engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objectiv...",19063
-55,56,https://github.com/fengdu78/deeplearning_ai_books,deeplearning_ai_books,deeplearning.ai（吴恩达老师的深度学习课程笔记及资源）,18785
-56,57,https://github.com/Byaidu/PDFMathTranslate,PDFMathTranslate,PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/Docker/Zotero,18768
-57,58,https://github.com/ScrapeGraphAI/Scrapegraph-ai,Scrapegraph-ai,Python scraper based on AI,18646
-58,59,https://github.com/chroma-core/chroma,chroma,the AI-native open-source embedding database,18636
-59,60,https://github.com/gitroomhq/postiz-app,postiz-app,"📨 The ultimate social media scheduling tool, with a bunch of AI  🤖",18479
-60,61,https://github.com/cube-js/cube,cube,"📊  Cube — Universal semantic layer platform for AI, BI, spreadsheets, and embedded analytics",18347
-61,62,https://github.com/sinaptik-ai/pandas-ai,pandas-ai,"Chat with your database or your datalake (SQL, CSV, parquet). PandasAI makes data analysis conversational using LLMs and RAG.",18053
-62,63,https://github.com/Avaiga/taipy,taipy,Turns Data and AI algorithms into production-ready web applications in no time.,17886
-63,64,https://github.com/vim-airline/vim-airline,vim-airline,lean & mean status/tabline for vim that's light as air,17858
-64,65,https://github.com/airbytehq/airbyte,airbyte,"The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted.",17525
-65,66,https://github.com/CopilotKit/CopilotKit,CopilotKit,"React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic last-mile 🪁",17410
-66,67,https://github.com/virattt/ai-hedge-fund,ai-hedge-fund,An AI Hedge Fund Team,17300
-67,68,https://github.com/apify/crawlee,crawlee,"Crawlee—A web scraping and browser automation library for Node.js to build reliable crawlers. In JavaScript and TypeScript. Extract data for AI, LLMs, RAG, or GPTs. Download HTML, PDF, JPG, PNG, a...",17153
-68,69,https://github.com/transitive-bullshit/agentic,agentic,AI agent stdlib that works with any LLM and TypeScript AI SDK.,17132
-69,70,https://github.com/xx025/carrot,carrot,Free ChatGPT Site List 这儿为你准备了众多免费好用的ChatGPT镜像站点,17098
-70,71,https://github.com/microsoft/qlib,qlib,"Qlib is an AI-oriented quantitative investment platform that aims to realize the potential, empower research, and create value using AI technologies in quantitative investment, from exploring idea...",16981
-71,72,https://github.com/microsoft/AirSim,AirSim,"Open source simulator for autonomous vehicles built on Unreal Engine / Unity, from Microsoft AI & Research",16908
-72,73,https://github.com/YunaiV/yudao-cloud,yudao-cloud,ruoyi-vue-pro 全新 Cloud 版本，优化重构所有功能。基于 Spring Cloud Alibaba + MyBatis Plus + Vue & Element 实现的后台管理系统 + 用户小程序，支持 RBAC 动态权限、多租户、数据权限、工作流、三方登录、支付、短信、商城、CRM、ERP、AI 大模型等功能。你的 ⭐️ Star ⭐️，是作者生发的动力！,16893
-73,74,https://github.com/meta-llama/llama-cookbook,llama-cookbook,"Welcome to the Llama Cookbook! This is your go to guide for Building with Llama: Getting started with Inference, Fine-Tuning, RAG. We also show you how to solve end to end problems using Llama mod...",16464
-74,75,https://github.com/dair-ai/ML-YouTube-Courses,ML-YouTube-Courses,📺 Discover the latest machine learning / AI courses on YouTube.,16388
-75,76,https://github.com/TransformerOptimus/SuperAGI,SuperAGI,"<⚡️> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably.",16060
-76,77,https://github.com/leon-ai/leon,leon,🧠 Leon is your open-source personal assistant.,16029
-77,78,https://github.com/e2b-dev/awesome-ai-agents,awesome-ai-agents,A list of AI autonomous agents,16002
-78,79,https://github.com/Stability-AI/StableLM,StableLM,StableLM: Stability AI Language Models,15836
-79,80,https://github.com/camenduru/stable-diffusion-webui-colab,stable-diffusion-webui-colab,stable diffusion webui colab,15788
-80,81,https://github.com/raga-ai-hub/RagaAI-Catalyst,RagaAI-Catalyst,"Python SDK for Agent AI Observability, Monitoring and Evaluation Framework. Includes features like agent, llm and tools tracing, debugging multi-agentic system, self-hosted dashboard and advanced ...",15679
-81,82,https://github.com/eosphoros-ai/DB-GPT,DB-GPT,AI Native Data App Development framework with AWEL(Agentic Workflow Expression Language) and Agents,15512
-82,83,https://github.com/aio-libs/aiohttp,aiohttp,Asynchronous HTTP client/server framework for asyncio and Python,15492
-83,84,https://github.com/arc53/DocsGPT,DocsGPT,"DocsGPT is an open-source genAI tool that helps users get reliable answers from knowledge source, while avoiding hallucinations. It enables private and reliable information retrieval, with tooling...",15444
-84,85,https://github.com/letta-ai/letta,letta,"Letta (formerly MemGPT) is the stateful agents framework with memory, reasoning, and context management.",15347
-85,86,https://github.com/mayooear/ai-pdf-chatbot-langchain,ai-pdf-chatbot-langchain,LangChain & LangGraph AI PDF chatbot agent,15204
-86,87,https://github.com/kailashahirwar/cheatsheets-ai,cheatsheets-ai,Essential Cheat Sheets for deep learning and machine learning researchers https://medium.com/@kailashahirwar/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5,15180
-87,88,https://github.com/Zeyi-Lin/HivisionIDPhotos,HivisionIDPhotos,⚡️HivisionIDPhotos: a lightweight and efficient AI ID photos tools. 一个轻量级的AI证件照制作算法。,15146
-88,89,https://github.com/SWE-agent/SWE-agent,SWE-agent,"SWE-agent takes a GitHub issue and tries to automatically fix it, using GPT-4, or your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS ...",14972
-89,90,https://github.com/apache/apisix,apisix,The Cloud-Native API Gateway and AI Gateway,14890
-90,91,https://github.com/xcanwin/KeepChatGPT,KeepChatGPT,这是一款提高ChatGPT的数据安全能力和效率的插件。并且免费共享大量创新功能，如：自动刷新、保持活跃、数据安全、取消审计、克隆对话、言无不尽、净化页面、展示大屏、拦截跟踪、日新月异、明察秋毫等。让我们的AI体验无比安全、顺畅、丝滑、高效、简洁。,14789
-91,92,https://github.com/daytonaio/daytona,daytona,Daytona is a Secure and Elastic Infrastructure for Running Your AI-Generated Code.,14643
-92,93,https://github.com/lss233/kirara-ai,kirara-ai,🤖 可 DIY 的 多模态 AI 聊天机器人 | 🚀 快速接入 微信、 QQ、Telegram、等聊天平台 | 🦈支持DeepSeek、Grok、Claude、Ollama、Gemini、OpenAI | 工作流系统、网页搜索、AI画图、人设调教、虚拟女仆、语音对话 | ,14605
-93,94,https://github.com/dzhng/deep-research,deep-research,"An AI-powered research assistant that performs iterative, deep research on any topic by combining search engines, web scraping, and large language models.  The goal of this repo is to provide the ...",14579
-94,95,https://github.com/bleedline/aimoneyhunter,aimoneyhunter,ai副业赚钱大集合，教你如何利用ai做一些副业项目，赚取更多额外收益。The Ultimate Guide to Making Money with AI Side Hustles: Learn how to leverage AI for some cool side gigs and rake in some extra cash. Check out the English vers...,14410
-95,96,https://github.com/iterative/dvc,dvc,🦉 Data Versioning and ML Experiments,14261
-96,97,https://github.com/vanna-ai/vanna,vanna,🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using RAG 🔄.,14219
-97,98,https://github.com/steven-tey/novel,novel,Notion-style WYSIWYG editor with AI-powered autocompletion.,14164
-98,99,https://github.com/vercel/ai-chatbot,ai-chatbot,"A full-featured, hackable Next.js AI chatbot built by Vercel",14008
-99,100,https://github.com/hoarder-app/hoarder,hoarder,"A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",13952
-100,101,https://github.com/microsoft/ai-edu,ai-edu,"AI education materials for Chinese students, teachers and IT professionals.",13788
-101,102,https://github.com/OpenNHP/opennhp,opennhp,"A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.",13584
+index,gid,url,name,description,stars,author,language
+0,1,https://github.com/Significant-Gravitas/AutoGPT,AutoGPT,"AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",173495,Significant-Gravitas,Python
+1,2,https://github.com/AUTOMATIC1111/stable-diffusion-webui,stable-diffusion-webui,Stable Diffusion web UI,149562,AUTOMATIC1111,Python
+2,3,https://github.com/open-webui/open-webui,open-webui,"User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",84014,open-webui,JavaScript
+3,4,https://github.com/langgenius/dify,dify,"Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting y...",82937,langgenius,TypeScript
+4,5,https://github.com/ChatGPTNextWeb/NextChat,NextChat,✨ Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android |  Linux | Windows,82009,ChatGPTNextWeb,TypeScript
+5,6,https://github.com/supabase/supabase,supabase,"The open source Firebase alternative. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",79348,supabase,TypeScript
+6,7,https://github.com/microsoft/generative-ai-for-beginners,generative-ai-for-beginners,"21 Lessons, Get Started Building with Generative AI  🔗 https://microsoft.github.io/generative-ai-for-beginners/",75221,microsoft,Jupyter Notebook
+7,8,https://github.com/fighting41love/funNLP,funNLP,中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、连续英文切割、各种中文词向量、公司名字大全、古诗词库、IT词库、财经词库、成语词库、地名词库...,71726,fighting41love,Python
+8,9,https://github.com/n8n-io/n8n,n8n,"Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",68055,n8n-io,TypeScript
+9,10,https://github.com/AppFlowy-IO/AppFlowy,AppFlowy,"Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",61449,AppFlowy-IO,Dart
+10,11,https://github.com/lobehub/lobe-chat,lobe-chat,"🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / DeepSeek / Qwen), Knowledge Base (file upload / knowledge manageme...",57793,lobehub,TypeScript
+11,12,https://github.com/lencx/ChatGPT,ChatGPT,"🔮 ChatGPT Desktop Application (Mac, Windows and Linux)",53651,lencx,Rust
+12,13,https://github.com/AntonOsika/gpt-engineer,gpt-engineer,CLI platform to experiment with codegen. Precursor to: https://lovable.dev,53403,AntonOsika,Python
+13,14,https://github.com/geekan/MetaGPT,MetaGPT,"🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",52718,geekan,Python
+14,15,https://github.com/langflow-ai/langflow,langflow,Langflow is a powerful tool for building and deploying AI-powered agents and workflows.,51847,langflow-ai,Python
+15,16,https://github.com/meilisearch/meilisearch,meilisearch,A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.,49789,meilisearch,Rust
+16,17,https://github.com/browser-use/browser-use,browser-use,Make websites accessible for AI agents,45291,browser-use,Python
+17,18,https://github.com/hacksider/Deep-Live-Cam,Deep-Live-Cam,real time face swap and one-click video deepfake with only a single image,44678,hacksider,Python
+18,19,https://github.com/hiyouga/LLaMA-Factory,LLaMA-Factory,Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024),44513,hiyouga,Python
+19,20,https://github.com/rasbt/LLMs-from-scratch,LLMs-from-scratch,"Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",42084,rasbt,Jupyter Notebook
+20,21,https://github.com/jeecgboot/JeecgBoot,JeecgBoot,🔥「AI 低代码平台」前后端分离 SpringBoot 2.x/3.x，SpringCloud，Ant Design&Vue3，Mybatis，Shiro！强大的代码生成器让前后端代码一键生成，无需写任何代码! 引领AI低代码开发模式 AI生成->OnlineCoding->代码生成->手工MERGE，帮助Java项目解决80%重复工作，让开发更关注业务，提高开发效率、节省成本，同时又不失灵活性,41889,jeecgboot,Java
+21,22,https://github.com/microsoft/autogen,autogen,A programming framework for agentic AI 🤖 PyPi: autogen-agentchat Discord: https://aka.ms/autogen-discord Office Hour: https://aka.ms/autogen-officehour,41636,microsoft,Python
+22,23,https://github.com/Mintplex-Labs/anything-llm,anything-llm,"The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, and more.",41203,Mintplex-Labs,JavaScript
+23,24,https://github.com/hpcaitech/ColossalAI,ColossalAI,"Making large AI models cheaper, faster and more accessible",40613,hpcaitech,Python
+24,25,https://github.com/Kong/kong,kong,🦍 The Cloud-Native API Gateway and AI Gateway.,40373,Kong,Lua
+25,26,https://github.com/apachecn/ailearning,ailearning,AiLearning：数据分析+机器学习实战+线性代数+PyTorch+NLTK+TF2,40347,apachecn,Python
+26,27,https://github.com/ClickHouse/ClickHouse,ClickHouse,ClickHouse® is a real-time analytics database management system,39579,ClickHouse,C++
+27,28,https://github.com/apache/airflow,airflow,"Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",39199,apache,Python
+28,29,https://github.com/LC044/WeChatMsg,WeChatMsg,提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手,38092,LC044,Python
+29,30,https://github.com/QuivrHQ/quivr,quivr,"Opiniated RAG for integrating GenAI in your apps 🧠   Focus on your product rather than the RAG. Easy integration in existing products with customisation!  Any LLM: GPT4, Groq, Llama. Any Vectorsto...",37546,QuivrHQ,Python
+30,31,https://github.com/LAION-AI/Open-Assistant,Open-Assistant,"OpenAssistant is a chat-based assistant that understands tasks, can interact with third-party systems, and retrieve information dynamically to do so.",37254,LAION-AI,Python
+31,32,https://github.com/OpenBB-finance/OpenBB,OpenBB,"Investment Research for Everyone, Everywhere.",37247,OpenBB-finance,Python
+32,33,https://github.com/GitHubDaily/GitHubDaily,GitHubDaily,"坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",36718,GitHubDaily,
+33,34,https://github.com/photoprism/photoprism,photoprism,AI-Powered Photos App for the Decentralized Web 🌈💎✨,36705,photoprism,Go
+34,35,https://github.com/microsoft/AI-For-Beginners,AI-For-Beginners,"12 Weeks, 24 Lessons, AI for All!",36512,microsoft,Jupyter Notebook
+35,36,https://github.com/ray-project/ray,ray,Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.,36050,ray-project,Python
+36,37,https://github.com/babysor/MockingBird,MockingBird,🚀AI拟声: 5秒内克隆您的声音并生成任意语音内容 Clone a voice in 5 seconds to generate arbitrary speech in real-time,35970,babysor,Python
+37,38,https://github.com/upscayl/upscayl,upscayl,"🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",35767,upscayl,TypeScript
+38,39,https://github.com/zhayujie/chatgpt-on-wechat,chatgpt-on-wechat,基于大模型搭建的聊天机器人，同时支持 微信公众号、企业微信应用、飞书、钉钉 等接入，可选择GPT3.5/GPT-4o/GPT-o1/ DeepSeek/Claude/文心一言/讯飞星火/通义千问/ Gemini/GLM-4/Claude/Kimi/LinkAI，能处理文本、语音和图片，访问操作系统和互联网，支持基于自有知识库进行定制企业智能客服。,35758,zhayujie,Python
+39,40,https://github.com/google-research/google-research,google-research,Google Research,35127,google-research,Jupyter Notebook
+40,41,https://github.com/xitu/gold-miner,gold-miner,🥇掘金翻译计划，可能是世界最大最好的英译中技术社区，最懂读者和译者的翻译平台：,33992,xitu,
+41,42,https://github.com/unclecode/crawl4ai,crawl4ai,"🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/mEkkMXFG",33557,unclecode,Python
+42,43,https://github.com/reworkd/AgentGPT,AgentGPT,"🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.",33412,reworkd,TypeScript
+43,44,https://github.com/Bin-Huang/chatbox,chatbox,"User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)",33374,Bin-Huang,TypeScript
+44,45,https://github.com/Pythagora-io/gpt-pilot,gpt-pilot,The first real AI developer,32498,Pythagora-io,Python
+45,46,https://github.com/mendableai/firecrawl,firecrawl,"🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.",31521,mendableai,TypeScript
+46,47,https://github.com/facebookresearch/fairseq,fairseq,Facebook AI Research Sequence-to-Sequence Toolkit written in Python.,31169,facebookresearch,Python
+47,48,https://github.com/explosion/spaCy,spaCy,💫 Industrial-strength Natural Language Processing (NLP) in Python,31159,explosion,Python
+48,49,https://github.com/mudler/LocalAI,LocalAI,":robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI,  running on consumer-grade hardware. No GPU required. Runs gguf...",31074,mudler,Go
+49,50,https://github.com/mckaywrigley/chatbot-ui,chatbot-ui,AI chat for any model.,30508,mckaywrigley,TypeScript
+50,51,https://github.com/TabbyML/tabby,tabby,Self-hosted AI coding assistant,30472,TabbyML,Rust
+51,52,https://github.com/mlflow/mlflow,mlflow,Open source platform for the machine learning lifecycle,19797,mlflow,Python
+52,53,https://github.com/air-verse/air,air,☁️ Live reload for Go apps,19706,air-verse,Go
+53,54,https://github.com/dailydotdev/daily,daily,"daily.dev is a professional network for developers to learn, collaborate, and grow together 👩🏽‍💻 👨‍💻",19263,dailydotdev,
+54,55,https://github.com/stitionai/devika,devika,"Devika is an Agentic AI Software Engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objectiv...",19070,stitionai,Python
+55,56,https://github.com/Byaidu/PDFMathTranslate,PDFMathTranslate,PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/Docker/Zotero,18838,Byaidu,Python
+56,57,https://github.com/fengdu78/deeplearning_ai_books,deeplearning_ai_books,deeplearning.ai（吴恩达老师的深度学习课程笔记及资源）,18795,fengdu78,HTML
+57,58,https://github.com/chroma-core/chroma,chroma,the AI-native open-source embedding database,18668,chroma-core,Rust
+58,59,https://github.com/ScrapeGraphAI/Scrapegraph-ai,Scrapegraph-ai,Python scraper based on AI,18667,ScrapeGraphAI,Python
+59,60,https://github.com/gitroomhq/postiz-app,postiz-app,"📨 The ultimate social media scheduling tool, with a bunch of AI  🤖",18565,gitroomhq,TypeScript
+60,61,https://github.com/cube-js/cube,cube,"📊  Cube — Universal semantic layer platform for AI, BI, spreadsheets, and embedded analytics",18348,cube-js,Rust
+61,62,https://github.com/sinaptik-ai/pandas-ai,pandas-ai,"Chat with your database or your datalake (SQL, CSV, parquet). PandasAI makes data analysis conversational using LLMs and RAG.",18127,sinaptik-ai,Python
+62,63,https://github.com/Avaiga/taipy,taipy,Turns Data and AI algorithms into production-ready web applications in no time.,17890,Avaiga,Python
+63,64,https://github.com/vim-airline/vim-airline,vim-airline,lean & mean status/tabline for vim that's light as air,17859,vim-airline,Vim Script
+64,65,https://github.com/virattt/ai-hedge-fund,ai-hedge-fund,An AI Hedge Fund Team,17818,virattt,Python
+65,66,https://github.com/airbytehq/airbyte,airbyte,"The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted.",17549,airbytehq,Python
+66,67,https://github.com/CopilotKit/CopilotKit,CopilotKit,"React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic last-mile 🪁",17429,CopilotKit,TypeScript
+67,68,https://github.com/apify/crawlee,crawlee,"Crawlee—A web scraping and browser automation library for Node.js to build reliable crawlers. In JavaScript and TypeScript. Extract data for AI, LLMs, RAG, or GPTs. Download HTML, PDF, JPG, PNG, a...",17165,apify,TypeScript
+68,69,https://github.com/transitive-bullshit/agentic,agentic,AI agent stdlib that works with any LLM and TypeScript AI SDK.,17139,transitive-bullshit,TypeScript
+69,70,https://github.com/xx025/carrot,carrot,Free ChatGPT Site List 这儿为你准备了众多免费好用的ChatGPT镜像站点,17096,xx025,
+70,71,https://github.com/microsoft/qlib,qlib,"Qlib is an AI-oriented quantitative investment platform that aims to realize the potential, empower research, and create value using AI technologies in quantitative investment, from exploring idea...",17001,microsoft,Python
+71,72,https://github.com/microsoft/AirSim,AirSim,"Open source simulator for autonomous vehicles built on Unreal Engine / Unity, from Microsoft AI & Research",16910,microsoft,C++
+72,73,https://github.com/YunaiV/yudao-cloud,yudao-cloud,ruoyi-vue-pro 全新 Cloud 版本，优化重构所有功能。基于 Spring Cloud Alibaba + MyBatis Plus + Vue & Element 实现的后台管理系统 + 用户小程序，支持 RBAC 动态权限、多租户、数据权限、工作流、三方登录、支付、短信、商城、CRM、ERP、AI 大模型等功能。你的 ⭐️ Star ⭐️，是作者生发的动力！,16898,YunaiV,Java
+73,74,https://github.com/meta-llama/llama-cookbook,llama-cookbook,"Welcome to the Llama Cookbook! This is your go to guide for Building with Llama: Getting started with Inference, Fine-Tuning, RAG. We also show you how to solve end to end problems using Llama mod...",16471,meta-llama,Jupyter Notebook
+74,75,https://github.com/dair-ai/ML-YouTube-Courses,ML-YouTube-Courses,📺 Discover the latest machine learning / AI courses on YouTube.,16390,dair-ai,
+75,76,https://github.com/TransformerOptimus/SuperAGI,SuperAGI,"<⚡️> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably.",16069,TransformerOptimus,Python
+76,77,https://github.com/e2b-dev/awesome-ai-agents,awesome-ai-agents,A list of AI autonomous agents,16054,e2b-dev,
+77,78,https://github.com/leon-ai/leon,leon,🧠 Leon is your open-source personal assistant.,16034,leon-ai,TypeScript
+78,79,https://github.com/Stability-AI/StableLM,StableLM,StableLM: Stability AI Language Models,15834,Stability-AI,Jupyter Notebook
+79,80,https://github.com/camenduru/stable-diffusion-webui-colab,stable-diffusion-webui-colab,stable diffusion webui colab,15787,camenduru,Jupyter Notebook
+80,81,https://github.com/raga-ai-hub/RagaAI-Catalyst,RagaAI-Catalyst,"Python SDK for Agent AI Observability, Monitoring and Evaluation Framework. Includes features like agent, llm and tools tracing, debugging multi-agentic system, self-hosted dashboard and advanced ...",15689,raga-ai-hub,Python
+81,82,https://github.com/eosphoros-ai/DB-GPT,DB-GPT,AI Native Data App Development framework with AWEL(Agentic Workflow Expression Language) and Agents,15554,eosphoros-ai,Python
+82,83,https://github.com/aio-libs/aiohttp,aiohttp,Asynchronous HTTP client/server framework for asyncio and Python,15496,aio-libs,Python
+83,84,https://github.com/arc53/DocsGPT,DocsGPT,"DocsGPT is an open-source genAI tool that helps users get reliable answers from knowledge source, while avoiding hallucinations. It enables private and reliable information retrieval, with tooling...",15454,arc53,TypeScript
+84,85,https://github.com/letta-ai/letta,letta,"Letta (formerly MemGPT) is the stateful agents framework with memory, reasoning, and context management.",15373,letta-ai,Python
+85,86,https://github.com/mayooear/ai-pdf-chatbot-langchain,ai-pdf-chatbot-langchain,LangChain & LangGraph AI PDF chatbot agent,15211,mayooear,TypeScript
+86,87,https://github.com/kailashahirwar/cheatsheets-ai,cheatsheets-ai,Essential Cheat Sheets for deep learning and machine learning researchers https://medium.com/@kailashahirwar/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5,15181,kailashahirwar,
+87,88,https://github.com/Zeyi-Lin/HivisionIDPhotos,HivisionIDPhotos,⚡️HivisionIDPhotos: a lightweight and efficient AI ID photos tools. 一个轻量级的AI证件照制作算法。,15175,Zeyi-Lin,Python
+88,89,https://github.com/SWE-agent/SWE-agent,SWE-agent,"SWE-agent takes a GitHub issue and tries to automatically fix it, using GPT-4, or your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS ...",14990,SWE-agent,Python
+89,90,https://github.com/apache/apisix,apisix,The Cloud-Native API Gateway and AI Gateway,14895,apache,Lua
+90,91,https://github.com/xcanwin/KeepChatGPT,KeepChatGPT,这是一款提高ChatGPT的数据安全能力和效率的插件。并且免费共享大量创新功能，如：自动刷新、保持活跃、数据安全、取消审计、克隆对话、言无不尽、净化页面、展示大屏、拦截跟踪、日新月异、明察秋毫等。让我们的AI体验无比安全、顺畅、丝滑、高效、简洁。,14789,xcanwin,JavaScript
+91,92,https://github.com/dzhng/deep-research,deep-research,"An AI-powered research assistant that performs iterative, deep research on any topic by combining search engines, web scraping, and large language models.  The goal of this repo is to provide the ...",14648,dzhng,TypeScript
+92,93,https://github.com/daytonaio/daytona,daytona,Daytona is a Secure and Elastic Infrastructure for Running Your AI-Generated Code.,14647,daytonaio,Go
+93,94,https://github.com/lss233/kirara-ai,kirara-ai,🤖 可 DIY 的 多模态 AI 聊天机器人 | 🚀 快速接入 微信、 QQ、Telegram、等聊天平台 | 🦈支持DeepSeek、Grok、Claude、Ollama、Gemini、OpenAI | 工作流系统、网页搜索、AI画图、人设调教、虚拟女仆、语音对话 | ,14627,lss233,Python
+94,95,https://github.com/bleedline/aimoneyhunter,aimoneyhunter,ai副业赚钱大集合，教你如何利用ai做一些副业项目，赚取更多额外收益。The Ultimate Guide to Making Money with AI Side Hustles: Learn how to leverage AI for some cool side gigs and rake in some extra cash. Check out the English vers...,14417,bleedline,
+95,96,https://github.com/iterative/dvc,dvc,🦉 Data Versioning and ML Experiments,14267,iterative,Python
+96,97,https://github.com/vanna-ai/vanna,vanna,🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using RAG 🔄.,14257,vanna-ai,Python
+97,98,https://github.com/steven-tey/novel,novel,Notion-style WYSIWYG editor with AI-powered autocompletion.,14172,steven-tey,TypeScript
+98,99,https://github.com/vercel/ai-chatbot,ai-chatbot,"A full-featured, hackable Next.js AI chatbot built by Vercel",14055,vercel,TypeScript
+99,100,https://github.com/hoarder-app/hoarder,hoarder,"A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",14055,hoarder-app,TypeScript
+100,101,https://github.com/microsoft/ai-edu,ai-edu,"AI education materials for Chinese students, teachers and IT professionals.",13789,microsoft,HTML
+101,102,https://github.com/OpenNHP/opennhp,opennhp,"A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.",13585,OpenNHP,Go

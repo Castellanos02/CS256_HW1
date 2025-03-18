@@ -29,3 +29,270 @@ collaborative decision-making. However, we st..."
 9,10,http://arxiv.org/abs/2303.11508v1,AI-in-the-Loop -- The impact of HMI in AI-based Application,"Julius Schöning, Clemens Westerkamp","Artificial intelligence (AI) and human-machine interaction (HMI) are two
 keywords that usually do not fit embedded applications. Within the steps needed
 before applying AI to solve a specific task..."
+10,11,http://arxiv.org/abs/2406.16696v1,Public Constitutional AI,Gilad Abiri,"We are increasingly subjected to the power of AI authorities. As AI decisions
+become inescapable, entering domains such as healthcare, education, and law, we
+must confront a vital question: how ca..."
+11,12,http://arxiv.org/abs/2502.11312v1,AI Generations: From AI 1.0 to AI 4.0,"Jiahao Wu, Hengxu You, Jing Du","This paper proposes that Artificial Intelligence (AI) progresses through
+several overlapping generations: AI 1.0 (Information AI), AI 2.0 (Agentic AI),
+AI 3.0 (Physical AI), and now a speculative ..."
+12,13,http://arxiv.org/abs/2206.00335v2,Putting AI Ethics into Practice: The Hourglass Model of Organizational AI Governance,"Matti Mäntymäki, Matti Minkkinen, Teemu Birkstedt, Mika Viljanen","The organizational use of artificial intelligence (AI) has rapidly spread
+across various sectors. Alongside the awareness of the benefits brought by AI,
+there is a growing consensus on the necessi..."
+13,14,http://arxiv.org/abs/2405.16355v1,Navigating AI Fallibility: Examining People's Reactions and Perceptions of AI after Encountering Personality Misrepresentations,"Qiaosi Wang, Chidimma L. Anyi, Vedant Das Swain, Ashok K. Goel","Many hyper-personalized AI systems profile people's characteristics (e.g.,
+personality traits) to provide personalized recommendations. These systems are
+increasingly used to facilitate interactio..."
+14,15,http://arxiv.org/abs/2502.00637v1,Constructing AI ethics narratives based on real-world data: Human-AI collaboration in data-driven visual storytelling,"Mengyi Wei, Chenjing Jiao, Chenyu Zuo, Lorenz Hurni, Liqiu Meng","AI ethics narratives have the potential to shape the public accurate
+understanding of AI technologies and promote communication among different
+stakeholders. However, AI ethics narratives are larg..."
+15,16,http://arxiv.org/abs/2103.16168v1,Understanding Mental Models of AI through Player-AI Interaction,"Jennifer Villareale, Jichen Zhu","Designing human-centered AI-driven applications require deep understandings
+of how people develop mental models of AI. Currently, we have little knowledge
+of this process and limited tools to stud..."
+16,17,http://arxiv.org/abs/1906.10418v1,Towards Enterprise-Ready AI Deployments Minimizing the Risk of Consuming AI Models in Business Applications,"Aleksander Slominski, Vinod Muthusamy, Vatche Ishakian","The stochastic nature of artificial intelligence (AI) models introduces risk
+to business applications that use AI models without careful consideration. This
+paper offers an approach to use AI tech..."
+17,18,http://arxiv.org/abs/2405.03999v1,Interaction Design for Human-AI Choreography Co-creation,Yimeng Liu,"Human-AI co-creation aims to combine human and AI strengths for artistic
+results exceeding individual capabilities. Frameworks exist for painting,
+music, and poetry, but choreography's embodied na..."
+18,19,http://arxiv.org/abs/2407.01557v1,AI Governance and Accountability: An Analysis of Anthropic's Claude,"Aman Priyanshu, Yash Maurya, Zuofei Hong","As AI systems become increasingly prevalent and impactful, the need for
+effective AI governance and accountability measures is paramount. This paper
+examines the AI governance landscape, focusing ..."
+19,20,http://arxiv.org/abs/2502.18676v1,Interacting with Thoughtful AI,"Xingyu Bruce Liu, Haijun Xia, Xiang Anthony Chen","We envision the concept of Thoughtful AI, a new human-AI interaction paradigm
+in which the AI behaves as a continuously thinking entity. Unlike conventional
+AI systems that operate on a turn-based..."
+20,21,http://arxiv.org/abs/2307.10057v1,Ethics in the Age of AI: An Analysis of AI Practitioners' Awareness and Challenges,"Aastha Pant, Rashina Hoda, Simone V. Spiegler, Chakkrit Tantithamthavorn, Burak Turhan","Ethics in AI has become a debated topic of public and expert discourse in
+recent years. But what do people who build AI - AI practitioners - have to say
+about their understanding of AI ethics and ..."
+21,22,http://arxiv.org/abs/2406.08271v1,Explainable AI improves task performance in human-AI collaboration,"Julian Senoner, Simon Schallmoser, Bernhard Kratzwald, Stefan Feuerriegel, Torbjørn Netland","Artificial intelligence (AI) provides considerable opportunities to assist
+human work. However, one crucial challenge of human-AI collaboration is that
+many AI algorithms operate in a black-box ma..."
+22,23,http://arxiv.org/abs/2008.04073v1,AI Failures: A Review of Underlying Issues,"Debarag Narayan Banerjee, Sasanka Sekhar Chanda","Instances of Artificial Intelligence (AI) systems failing to deliver
+consistent, satisfactory performance are legion. We investigate why AI failures
+occur. We address only a narrow subset of the b..."
+23,24,http://arxiv.org/abs/2111.08460v4,Enabling human-centered AI: A new junction and shared journey between AI and HCI communities,"Wei Xu, Marvin Dainoff","Artificial intelligence (AI) has brought benefits, but it may also cause harm
+if it is not appropriately developed. Current development is mainly driven by a
+""technology-centered"" approach, causin..."
+24,25,http://arxiv.org/abs/2306.10052v1,"Assigning AI: Seven Approaches for Students, with Prompts","Ethan Mollick, Lilach Mollick","This paper examines the transformative role of Large Language Models (LLMs)
+in education and their potential as learning tools, despite their inherent
+risks and limitations. The authors propose se..."
+25,26,http://arxiv.org/abs/2408.12935v3,"Trustworthy, Responsible, and Safe AI: A Comprehensive Architectural Framework for AI Safety with Challenges and Mitigations","Chen Chen, Xueluan Gong, Ziyao Liu, Weifeng Jiang, Si Qi Goh, Kwok-Yan Lam","AI Safety is an emerging area of critical importance to the safe adoption and
+deployment of AI systems. With the rapid proliferation of AI and especially
+with the recent advancement of Generative ..."
+26,27,http://arxiv.org/abs/2003.00866v2,Enabling AI in Future Wireless Networks: A Data Life Cycle Perspective,"Dinh C. Nguyen, Peng Cheng, Ming Ding, David Lopez-Perez, Pubudu N. Pathirana, Jun Li, Aruna Seneviratne, Yonghui Li, H. Vincent Poor","Recent years have seen rapid deployment of mobile computing and Internet of
+Things (IoT) networks, which can be mostly attributed to the increasing
+communication and sensing capabilities of wirele..."
+27,28,http://arxiv.org/abs/2405.12193v1,The Narrow Depth and Breadth of Corporate Responsible AI Research,"Nur Ahmed, Amit Das, Kirsten Martin, Kawshik Banerjee","The transformative potential of AI presents remarkable opportunities, but
+also significant risks, underscoring the importance of responsible AI
+development and deployment. Despite a growing emphas..."
+28,29,http://arxiv.org/abs/2406.18211v1,AI Cards: Towards an Applied Framework for Machine-Readable AI and Risk Documentation Inspired by the EU AI Act,"Delaram Golpayegani, Isabelle Hupont, Cecilia Panigutti, Harshvardhan J. Pandit, Sven Schade, Declan O'Sullivan, Dave Lewis","With the upcoming enforcement of the EU AI Act, documentation of high-risk AI
+systems and their risk management information will become a legal requirement
+playing a pivotal role in demonstration ..."
+29,30,http://arxiv.org/abs/2502.14870v1,Why do Experts Disagree on Existential Risk and P(doom)? A Survey of AI Experts,Severin Field,"The development of artificial general intelligence (AGI) is likely to be one
+of humanity's most consequential technological advancements. Leading AI labs
+and scientists have called for the global ..."
+30,31,http://arxiv.org/abs/2105.08867v1,AI and Ethics -- Operationalising Responsible AI,"Liming Zhu, Xiwei Xu, Qinghua Lu, Guido Governatori, Jon Whittle","In the last few years, AI continues demonstrating its positive impact on
+society while sometimes with ethically questionable consequences. Building and
+maintaining public trust in AI has been iden..."
+31,32,http://arxiv.org/abs/2306.01795v1,AI and the creative realm: A short review of current and future applications,"Fabio Crimaldi, Manuele Leonelli","This study explores the concept of creativity and artificial intelligence
+(AI) and their recent integration. While AI has traditionally been perceived as
+incapable of generating new ideas or creat..."
+32,33,http://arxiv.org/abs/2312.14230v2,Views on AI aren't binary -- they're plural,"Thorin Bristow, Luke Thorburn, Diana Acosta-Navas","Recent developments in AI have brought broader attention to tensions between
+two overlapping communities, ""AI Ethics"" and ""AI Safety."" In this article we
+(i) characterize this false binary, (ii) a..."
+33,34,http://arxiv.org/abs/2405.06643v2,Levels of AI Agents: from Rules to Large Language Models,Yu Huang,"AI agents are defined as artificial entities to perceive the environment,
+make decisions and take actions. Inspired by the 6 levels of autonomous driving
+by Society of Automotive Engineers, the AI..."
+34,35,http://arxiv.org/abs/2410.03566v1,A Survey on Offensive AI Within Cybersecurity,"Sahil Girhepuje, Aviral Verma, Gaurav Raina","Artificial Intelligence (AI) has witnessed major growth and integration
+across various domains. As AI systems become increasingly prevalent, they also
+become targets for threat actors to manipulat..."
+35,36,http://arxiv.org/abs/1704.08389v2,Tweeting AI: Perceptions of AI-Tweeters (AIT) vs Expert AI-Tweeters (EAIT),"Lydia Manikonda, Cameron Dudley, Subbarao Kambhampati","With the recent advancements in Artificial Intelligence (AI), various
+organizations and individuals started debating about the progress of AI as a
+blessing or a curse for the future of the society..."
+36,37,http://arxiv.org/abs/1709.09534v1,Tweeting AI: Perceptions of Lay vs Expert Twitterati,"Lydia Manikonda, Subbarao Kambhampati","With the recent advancements in Artificial Intelligence (AI), various
+organizations and individuals are debating about the progress of AI as a
+blessing or a curse for the future of the society. Th..."
+37,38,http://arxiv.org/abs/2101.06220v2,Player-AI Interaction: What Neural Network Games Reveal About AI as Play,"Jichen Zhu, Jennifer Villareale, Nithesh Javvaji, Sebastian Risi, Mathias Löwe, Rush Weigelt, Casper Harteveld","The advent of artificial intelligence (AI) and machine learning (ML) bring
+human-AI interaction to the forefront of HCI research. This paper argues that
+games are an ideal domain for studying and ..."
+38,39,http://arxiv.org/abs/2011.10672v2,AI Governance for Businesses,"Johannes Schneider, Rene Abraham, Christian Meske, Jan vom Brocke","Artificial Intelligence (AI) governance regulates the exercise of authority
+and control over the management of AI. It aims at leveraging AI through
+effective use of data and minimization of AI-rel..."
+39,40,http://arxiv.org/abs/2210.08984v1,AI Governance and Ethics Framework for Sustainable AI and Sustainability,Mahendra Samarawickrama,"AI is transforming the existing technology landscape at a rapid phase
+enabling data-informed decision making and autonomous decision making. Unlike
+any other technology, because of the decision-ma..."
+40,41,http://arxiv.org/abs/2306.01149v1,AI Liability Insurance With an Example in AI-Powered E-diagnosis System,"Yunfei Ge, Quanyan Zhu","Artificial Intelligence (AI) has received an increasing amount of attention
+in multiple areas. The uncertainties and risks in AI-powered systems have
+created reluctance in their wild adoption. As ..."
+41,42,http://arxiv.org/abs/2405.02846v1,Responsible AI: Portraits with Intelligent Bibliometrics,"Yi Zhang, Mengjia Wu, Guangquan Zhang, Jie Lu","Shifting the focus from principles to practical implementation, responsible
+artificial intelligence (AI) has garnered considerable attention across
+academia, industry, and society at large. Despit..."
+42,43,http://arxiv.org/abs/2405.15051v1,From Explainable to Interactive AI: A Literature Review on Current Trends in Human-AI Interaction,"Muhammad Raees, Inge Meijerink, Ioanna Lykourentzou, Vassilis-Javed Khan, Konstantinos Papangelis","AI systems are increasingly being adopted across various domains and
+application areas. With this surge, there is a growing research focus and
+societal concern for actively involving humans in dev..."
+43,44,http://arxiv.org/abs/2412.17243v1,"""From Unseen Needs to Classroom Solutions"": Exploring AI Literacy Challenges & Opportunities with Project-based Learning Toolkit in K-12 Education","Hanqi Li, Ruiwei Xiao, Hsuan Nieu, Ying-Jui Tseng, Guanze Liao","As artificial intelligence (AI) becomes increasingly central to various
+fields, there is a growing need to equip K-12 students with AI literacy skills
+that extend beyond computer science. This pap..."
+44,45,http://arxiv.org/abs/2501.09007v1,AI-RAN: Transforming RAN with AI-driven Computing Infrastructure,"Lopamudra Kundu, Xingqin Lin, Rajesh Gadiyar, Jean-Francois Lacasse, Shuvo Chowdhury","The radio access network (RAN) landscape is undergoing a transformative shift
+from traditional, communication-centric infrastructures towards converged
+compute-communication platforms. This articl..."
+45,46,http://arxiv.org/abs/2503.02865v2,FairSense-AI: Responsible AI Meets Sustainability,"Shaina Raza, Mukund Sayeeganesh Chettiar, Matin Yousefabadi, Tahniat Khan, Marcelo Lotif","In this paper, we introduce FairSense-AI: a multimodal framework designed to
+detect and mitigate bias in both text and images. By leveraging Large Language
+Models (LLMs) and Vision-Language Models..."
+46,47,http://arxiv.org/abs/2407.13077v1,Visions of a Discipline: Analyzing Introductory AI Courses on YouTube,"Severin Engelmann, Madiha Zahrah Choksi, Angelina Wang, Casey Fiesler","Education plays an indispensable role in fostering societal well-being and is
+widely regarded as one of the most influential factors in shaping the future of
+generations to come. As artificial int..."
+47,48,http://arxiv.org/abs/2408.12781v1,The Model Mastery Lifecycle: A Framework for Designing Human-AI Interaction,"Mark Chignell, Mu-Huan Miles Chung, Jaturong Kongmanee, Khilan Jerath, Abhay Raman","The utilization of AI in an increasing number of fields is the latest
+iteration of a long process, where machines and systems have been replacing
+humans, or changing the roles that they play, in v..."
+48,49,http://arxiv.org/abs/2503.06353v1,"The AI Pentad, the CHARME$^{2}$D Model, and an Assessment of Current-State AI Regulation","Di Kevin Gao, Sudip Mittal, Jiming Wu, Hongwei Du, Jingdao Chen, Shahram Rahimi","Artificial Intelligence (AI) has made remarkable progress in the past few
+years with AI-enabled applications beginning to permeate every aspect of our
+society. Despite the widespread consensus on ..."
+49,50,http://arxiv.org/abs/2202.05957v1,Confident AI,Jim Davis,"In this paper, we propose ""Confident AI"" as a means to designing Artificial
+Intelligence (AI) and Machine Learning (ML) systems with both algorithm and
+user confidence in model predictions and rep..."
+50,51,http://arxiv.org/abs/1909.03550v1,Lecture Notes: Optimization for Machine Learning,Elad Hazan,"Lecture notes on optimization for machine learning, derived from a course at
+Princeton University and tutorials given in MLSS, Buenos Aires, as well as
+Simons Foundation, Berkeley."
+51,52,http://arxiv.org/abs/1811.04422v1,An Optimal Control View of Adversarial Machine Learning,Xiaojin Zhu,"I describe an optimal control view of adversarial machine learning, where the
+dynamical system is the machine learner, the input are adversarial actions, and
+the control costs are defined by the a..."
+52,53,http://arxiv.org/abs/1707.04849v1,Minimax deviation strategies for machine learning and recognition with short learning samples,"Michail Schlesinger, Evgeniy Vodolazskiy","The article is devoted to the problem of small learning samples in machine
+learning. The flaws of maximum likelihood learning and minimax learning are
+looked into and the concept of minimax deviat..."
+53,54,http://arxiv.org/abs/1909.09246v1,Machine Learning for Clinical Predictive Analytics,Wei-Hung Weng,"In this chapter, we provide a brief overview of applying machine learning
+techniques for clinical prediction tasks. We begin with a quick introduction to
+the concepts of machine learning and outli..."
+54,55,http://arxiv.org/abs/2301.09753v1,Towards Modular Machine Learning Solution Development: Benefits and Trade-offs,"Samiyuru Menik, Lakshmish Ramaswamy","Machine learning technologies have demonstrated immense capabilities in
+various domains. They play a key role in the success of modern businesses.
+However, adoption of machine learning technologie..."
+55,56,http://arxiv.org/abs/0904.3664v1,Introduction to Machine Learning: Class Notes 67577,Amnon Shashua,"Introduction to Machine learning covering Statistical Inference (Bayes, EM,
+ML/MaxEnt duality), algebraic and spectral methods (PCA, LDA, CCA, Clustering),
+and PAC learning (the Formal model, VC d..."
+56,57,http://arxiv.org/abs/2012.04105v1,The Tribes of Machine Learning and the Realm of Computer Architecture,"Ayaz Akram, Jason Lowe-Power","Machine learning techniques have influenced the field of computer
+architecture like many other fields. This paper studies how the fundamental
+machine learning techniques can be applied towards com..."
+57,58,http://arxiv.org/abs/2204.07492v2,"A Machine Learning Tutorial for Operational Meteorology, Part I: Traditional Machine Learning","Randy J. Chase, David R. Harrison, Amanda Burke, Gary M. Lackmann, Amy McGovern","Recently, the use of machine learning in meteorology has increased greatly.
+While many machine learning methods are not new, university classes on machine
+learning are largely unavailable to meteo..."
+58,59,http://arxiv.org/abs/1911.06612v1,Position Paper: Towards Transparent Machine Learning,Dustin Juliano,"Transparent machine learning is introduced as an alternative form of machine
+learning, where both the model and the learning system are represented in
+source code form. The goal of this project is..."
+59,60,http://arxiv.org/abs/1909.01866v1,Understanding Bias in Machine Learning,"Jindong Gu, Daniela Oelke","Bias is known to be an impediment to fair decisions in many domains such as
+human resources, the public sector, health care etc. Recently, hope has been
+expressed that the use of machine learning ..."
+60,61,http://arxiv.org/abs/1903.08801v1,A Unified Analytical Framework for Trustable Machine Learning and Automation Running with Blockchain,Tao Wang,"Traditional machine learning algorithms use data from databases that are
+mutable, and therefore the data cannot be fully trusted. Also, the machine
+learning process is difficult to automate. This ..."
+61,62,http://arxiv.org/abs/2108.07915v1,Data Pricing in Machine Learning Pipelines,"Zicun Cong, Xuan Luo, Pei Jian, Feida Zhu, Yong Zhang","Machine learning is disruptive. At the same time, machine learning can only
+succeed by collaboration among many parties in multiple steps naturally as
+pipelines in an eco-system, such as collectin..."
+62,63,http://arxiv.org/abs/1707.09562v3,MLBench: How Good Are Machine Learning Clouds for Binary Classification Tasks on Structured Data?,"Yu Liu, Hantian Zhang, Luyuan Zeng, Wentao Wu, Ce Zhang","We conduct an empirical study of machine learning functionalities provided by
+major cloud service providers, which we call machine learning clouds. Machine
+learning clouds hold the promise of hidi..."
+63,64,http://arxiv.org/abs/1907.08908v1,Techniques for Automated Machine Learning,"Yi-Wei Chen, Qingquan Song, Xia Hu","Automated machine learning (AutoML) aims to find optimal machine learning
+solutions automatically given a machine learning problem. It could release the
+burden of data scientists from the multifar..."
+64,65,http://arxiv.org/abs/2312.03120v1,"The Landscape of Modern Machine Learning: A Review of Machine, Distributed and Federated Learning","Omer Subasi, Oceane Bel, Joseph Manzano, Kevin Barker","With the advance of the powerful heterogeneous, parallel and distributed
+computing systems and ever increasing immense amount of data, machine learning
+has become an indispensable part of cutting-..."
+65,66,http://arxiv.org/abs/2206.07090v2,Parallelization of Machine Learning Algorithms Respectively on Single Machine and Spark,Jiajun Shen,"With the rapid development of big data technologies, how to dig out useful
+information from massive data becomes an essential problem. However, using
+machine learning algorithms to analyze large d..."
+66,67,http://arxiv.org/abs/1507.02188v1,AutoCompete: A Framework for Machine Learning Competition,"Abhishek Thakur, Artus Krohn-Grimberghe","In this paper, we propose AutoCompete, a highly automated machine learning
+framework for tackling machine learning competitions. This framework has been
+learned by us, validated and improved over ..."
+67,68,http://arxiv.org/abs/1212.2686v1,Joint Training of Deep Boltzmann Machines,"Ian Goodfellow, Aaron Courville, Yoshua Bengio","We introduce a new method for training deep Boltzmann machines jointly. Prior
+methods require an initial learning pass that trains the deep Boltzmann machine
+greedily, one layer at a time, or do n..."
+68,69,http://arxiv.org/abs/1607.02450v2,Proceedings of the 2016 ICML Workshop on #Data4Good: Machine Learning in Social Good Applications,Kush R. Varshney,"This is the Proceedings of the ICML Workshop on #Data4Good: Machine Learning
+in Social Good Applications, which was held on June 24, 2016 in New York."
+69,70,http://arxiv.org/abs/2007.01503v1,Mathematical Perspective of Machine Learning,Yarema Boryshchak,"We take a closer look at some theoretical challenges of Machine Learning as a
+function approximation, gradient descent as the default optimization algorithm,
+limitations of fixed length and width ..."
+70,71,http://arxiv.org/abs/2001.04942v2,Private Machine Learning via Randomised Response,David Barber,"We introduce a general learning framework for private machine learning based
+on randomised response. Our assumption is that all actors are potentially
+adversarial and as such we trust only to rele..."
+71,72,http://arxiv.org/abs/1911.00776v1,Ten-year Survival Prediction for Breast Cancer Patients,"Changmao Li, Han He, Yunze Hao, Caleb Ziems","This report assesses different machine learning approaches to 10-year
+survival prediction of breast cancer patients."
+72,73,http://arxiv.org/abs/1906.06821v2,A Survey of Optimization Methods from a Machine Learning Perspective,"Shiliang Sun, Zehui Cao, Han Zhu, Jing Zhao","Machine learning develops rapidly, which has made many theoretical
+breakthroughs and is widely applied in various fields. Optimization, as an
+important part of machine learning, has attracted much..."
+73,74,http://arxiv.org/abs/2011.11819v1,When Machine Learning Meets Privacy: A Survey and Outlook,"Bo Liu, Ming Ding, Sina Shaham, Wenny Rahayu, Farhad Farokhi, Zihuai Lin","The newly emerged machine learning (e.g. deep learning) methods have become a
+strong driving force to revolutionize a wide range of industries, such as smart
+healthcare, financial technology, and ..."
+74,75,http://arxiv.org/abs/2004.00993v2,Augmented Q Imitation Learning (AQIL),"Xiao Lei Zhang, Anish Agarwal","The study of unsupervised learning can be generally divided into two
+categories: imitation learning and reinforcement learning. In imitation
+learning the machine learns by mimicking the behavior o..."
+75,76,http://arxiv.org/abs/2009.11087v1,Probabilistic Machine Learning for Healthcare,"Irene Y. Chen, Shalmali Joshi, Marzyeh Ghassemi, Rajesh Ranganath","Machine learning can be used to make sense of healthcare data. Probabilistic
+machine learning models help provide a complete picture of observed data in
+healthcare. In this review, we examine how ..."
+76,77,http://arxiv.org/abs/2303.18087v1,Evaluation Challenges for Geospatial ML,Esther Rolf,"As geospatial machine learning models and maps derived from their predictions
+are increasingly used for downstream analyses in science and policy, it is
+imperative to evaluate their accuracy and a..."
+77,78,http://arxiv.org/abs/2401.11351v2,A comprehensive review of Quantum Machine Learning: from NISQ to Fault Tolerance,"Yunfei Wang, Junyu Liu","Quantum machine learning, which involves running machine learning algorithms
+on quantum devices, has garnered significant attention in both academic and
+business circles. In this paper, we offer a..."
+78,79,http://arxiv.org/abs/2003.05155v2,Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology,"Stefan Studer, Thanh Binh Bui, Christian Drescher, Alexander Hanuschkin, Ludwig Winkler, Steven Peters, Klaus-Robert Mueller","Machine learning is an established and frequently used technique in industry
+and academia but a standard process model to improve success and efficiency of
+machine learning applications is still m..."
+79,80,http://arxiv.org/abs/1706.08001v1,Temporal-related Convolutional-Restricted-Boltzmann-Machine capable of learning relational order via reinforcement learning procedure?,Zizhuang Wang,"In this article, we extend the conventional framework of
+convolutional-Restricted-Boltzmann-Machine to learn highly abstract features
+among abitrary number of time related input maps by constructi..."
+80,81,http://arxiv.org/abs/2405.03720v1,Spatial Transfer Learning with Simple MLP,Hongjian Yang,"First step to investigate the potential of transfer learning applied to the
+field of spatial statistics"
+81,82,http://arxiv.org/abs/1207.4676v2,Proceedings of the 29th International Conference on Machine Learning (ICML-12),"John Langford, Joelle Pineau","This is an index to the papers that appear in the Proceedings of the 29th
+International Conference on Machine Learning (ICML-12). The conference was held
+in Edinburgh, Scotland, June 27th - July 3..."
+82,83,http://arxiv.org/abs/1603.02185v1,Distributed Multi-Task Learning with Shared Representation,"Jialei Wang, Mladen Kolar, Nathan Srebro","We study the problem of distributed multi-task learning with shared
+representation, where each machine aims to learn a separate, but related, task
+in an unknown shared low-dimensional subspaces, i..."
+83,84,http://arxiv.org/abs/1910.12387v2,Components of Machine Learning: Binding Bits and FLOPS,Alexander Jung,"Many machine learning problems and methods are combinations of three
+components: data, hypothesis space and loss function. Different machine
+learning methods are obtained as combinations of differ..."
+84,85,http://arxiv.org/abs/2007.05479v1,Impact of Legal Requirements on Explainability in Machine Learning,"Adrien Bibal, Michael Lognoul, Alexandre de Streel, Benoît Frénay","The requirements on explainability imposed by European laws and their
+implications for machine learning (ML) models are not always clear. In that
+perspective, our research analyzes explanation obl..."
+85,86,http://arxiv.org/abs/2007.14206v1,Machine Learning Potential Repository,Atsuto Seko,"This paper introduces a machine learning potential repository that includes
+Pareto optimal machine learning potentials. It also shows the systematic
+development of accurate and fast machine learni..."
+86,87,http://arxiv.org/abs/2412.18979v1,Quantum memristors for neuromorphic quantum machine learning,Lucas Lamata,"Quantum machine learning may permit to realize more efficient machine
+learning calculations with near-term quantum devices. Among the diverse quantum
+machine learning paradigms which are currently..."
+87,88,http://arxiv.org/abs/1908.04710v3,metric-learn: Metric Learning Algorithms in Python,"William de Vazelhes, CJ Carey, Yuan Tang, Nathalie Vauquier, Aurélien Bellet","metric-learn is an open source Python package implementing supervised and
+weakly-supervised distance metric learning algorithms. As part of
+scikit-learn-contrib, it provides a unified interface co..."
+88,89,http://arxiv.org/abs/2002.12364v1,Theoretical Models of Learning to Learn,Jonathan Baxter,"A Machine can only learn if it is biased in some way. Typically the bias is
+supplied by hand, for example through the choice of an appropriate set of
+features. However, if the learning machine is ..."
+89,90,http://arxiv.org/abs/1509.00913v3,On-the-Fly Learning in a Perpetual Learning Machine,Andrew J. R. Simpson,"Despite the promise of brain-inspired machine learning, deep neural networks
+(DNN) have frustratingly failed to bridge the deceptively large gap between
+learning and memory. Here, we introduce a P..."
+90,91,http://arxiv.org/abs/1607.01400v1,An Aggregate and Iterative Disaggregate Algorithm with Proven Optimality in Machine Learning,"Young Woong Park, Diego Klabjan","We propose a clustering-based iterative algorithm to solve certain
+optimization problems in machine learning, where we start the algorithm by
+aggregating the original data, solving the problem on ..."
+91,92,http://arxiv.org/abs/2202.10564v1,Human-in-the-loop Machine Learning: A Macro-Micro Perspective,"Jiangtao Wang, Bin Guo, Liming Chen","Though technical advance of artificial intelligence and machine learning has
+enabled many promising intelligent systems, many computing tasks are still not
+able to be fully accomplished by machine..."
+92,93,http://arxiv.org/abs/2407.05526v1,Can Machines Learn the True Probabilities?,Jinsook Kim,"When there exists uncertainty, AI machines are designed to make decisions so
+as to reach the best expected outcomes. Expectations are based on true facts
+about the objective environment the machin..."
+93,94,http://arxiv.org/abs/2110.12773v1,Scientific Machine Learning Benchmarks,"Jeyan Thiyagalingam, Mallikarjun Shankar, Geoffrey Fox, Tony Hey","The breakthrough in Deep Learning neural networks has transformed the use of
+AI and machine learning technologies for the analysis of very large
+experimental datasets. These datasets are typically..."
+94,95,http://arxiv.org/abs/2001.09608v1,Some Insights into Lifelong Reinforcement Learning Systems,Changjian Li,"A lifelong reinforcement learning system is a learning system that has the
+ability to learn through trail-and-error interaction with the environment over
+its lifetime. In this paper, I give some a..."
+95,96,http://arxiv.org/abs/1612.04858v1,Bayesian Optimization for Machine Learning : A Practical Guidebook,"Ian Dewancker, Michael McCourt, Scott Clark","The engineering of machine learning systems is still a nascent field; relying
+on a seemingly daunting collection of quickly evolving tools and best
+practices. It is our hope that this guidebook wi..."
+96,97,http://arxiv.org/abs/1702.08608v2,Towards A Rigorous Science of Interpretable Machine Learning,"Finale Doshi-Velez, Been Kim","As machine learning systems become ubiquitous, there has been a surge of
+interest in interpretable machine learning: systems that provide explanation
+for their outputs. These explanations are ofte..."
+97,98,http://arxiv.org/abs/1705.07538v2,Infrastructure for Usable Machine Learning: The Stanford DAWN Project,"Peter Bailis, Kunle Olukotun, Christopher Re, Matei Zaharia","Despite incredible recent advances in machine learning, building machine
+learning applications remains prohibitively time-consuming and expensive for
+all but the best-trained, best-funded engineer..."
+98,99,http://arxiv.org/abs/1808.00033v3,Techniques for Interpretable Machine Learning,"Mengnan Du, Ninghao Liu, Xia Hu","Interpretable machine learning tackles the important problem that humans
+cannot understand the behaviors of complex machine learning models and how
+these models arrive at a particular decision. Al..."
+99,100,http://arxiv.org/abs/1911.08587v1,Solving machine learning optimization problems using quantum computers,"Venkat R. Dasari, Mee Seong Im, Lubjana Beshaj","Classical optimization algorithms in machine learning often take a long time
+to compute when applied to a multi-dimensional problem and require a huge
+amount of CPU and GPU resource. Quantum paral..."
