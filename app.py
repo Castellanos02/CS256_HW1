@@ -316,9 +316,6 @@ with app.app_context():
             db.session.add(media_entry)
             db.session.commit()
 
-    # client = OpenAI()
-    # chatHistory = {"use   r":""}
-
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -332,16 +329,44 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html')
 
-@app.route('/home')
+@app.route('/home', methods=['GET','POST'])
 def home():
+    if 'bookmark' in request.form:
+        bookmark = request.form.get("bookmark")
+        bmId = uuid.UUID(request.form.get("id"))
+        if bookmark=='Bookmark':
+            print('add')
+            bmName = request.form.get("name")
+            bmAuthor = request.form.get("author")
+            bmStars = request.form.get("stars")
+            if bmStars and bmStars != "None":
+                bmStars = float(bmStars)
+            else:
+                bmStars = None
+            bmMedia = request.form.get("mediaType")
+            bmLink = request.form.get("link")
+            bmDesc = request.form.get("description")
+            bm_entry = bookmarked(mediaId=bmId, mediaType=bmMedia, name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=bmAuthor, stars=bmStars)
+            db.session.add(bm_entry)
+            db.session.commit()
+        else:
+            print("delete")
+            remove = db.session.query(bookmarked).filter(bookmarked.mediaId==bmId, bookmarked.userId==session['user_id']).first()
+            print(remove)
+            if remove:
+                print("in")
+                db.session.delete(remove)
+                db.session.commit()
     bookmarked_items = bookmarked.query.filter_by(userId=session.get('user_id')).all()
+    bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session.get('user_id')).all()
+    bookmarks = [str(i[0]) for i in bookmarks]
+
     print(f"User ID: {session.get('user_id')}")  
     print(f"Bookmarked Items: {bookmarked_items}")  
     if not bookmarked_items:  
         print("No bookmarks found.")
-    return render_template('home.html', is_admin=session.get('is_admin', 0))
+    return render_template('home.html', bookmarked_items=bookmarked_items, bookmarks=bookmarks, is_admin=session.get('is_admin', 0))
 
-<<<<<<< Updated upstream
 @app.route('/create_user', methods=['GET', 'POST'])
 def create():
     error=None
@@ -367,12 +392,7 @@ def create():
             return redirect(url_for('home'))
     return render_template('create_user.html', error=error)
 
-
-
-@app.route('/search_engine', methods=['GET', 'POST'])
-=======
 @app.route('/search_engine')
->>>>>>> Stashed changes
 def search():
 
     return render_template('search_engine.html', is_admin=session.get('is_admin', 0))
@@ -384,11 +404,13 @@ def github():
         bmId = uuid.UUID(request.form.get("id"))
         bmName = request.form.get("name")
         bmLink = request.form.get("link")
+        bmAuthor = request.form.get("author")
+        bmStars = request.form.get("stars")
         bmDesc = request.form.get("description")
         if bookmark=='Bookmark':
             print("add")
             print(type(session['user_id']))
-            bm_entry = bookmarked(mediaId=bmId, mediaType="Github Repo", name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=None)
+            bm_entry = bookmarked(mediaId=bmId, mediaType="Github Repo", name=bmName, userId=session['user_id'], link=bmLink, description=bmDesc, author=bmAuthor, stars=bmStars)
             db.session.add(bm_entry)
             db.session.commit()
         else:
@@ -402,7 +424,6 @@ def github():
 
     bookmarks = db.session.query(bookmarked.mediaId).filter(bookmarked.userId==session['user_id']).all()
     bookmarks = [i[0] for i in bookmarks]
-    print(bookmarks)
     page = request.args.get('page', 1, type=int)
     repos = db.session.query(githubdb).order_by(githubdb.stars.desc()).paginate(page=page, per_page=15, error_out=False)
     return render_template('repo_explorer.html', repos=repos.items, pagination=repos, bookmarks=bookmarks, page=page, is_admin=session.get('is_admin', 0))
